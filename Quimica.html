@@ -1,0 +1,754 @@
+<html>
+<head>
+    <title>Química</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f9ff;
+            color: #0f172a;
+        }
+
+        header{
+            background: linear-gradient(135deg, #0ea5e9, #1e40af);
+            color: #e0f2fe;
+            padding: 28px;
+            text-align: center;
+            border-bottom: 4px solid #38bdf8;
+        }
+
+        nav{
+            background: #ffffff;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #bae6fd;
+        }
+
+        nav a{
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 14px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            background: #e0f2fe;
+            color: #1e40af;
+        }
+
+        main{
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2{
+            color: #1e40af;
+            border-left: 4px solid #38bdf8;
+            padding-left: 10px;
+        }
+
+        h3{
+            color: #0c4a6e;
+        }
+
+        main > div{
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 25px;
+            border: 1px solid #bae6fd;
+            box-shadow: 0 8px 20px rgba(30,64,175,0.12);
+        }
+
+        ul li{
+            margin-bottom: 8px;
+        }
+
+        .pdf-link{
+            display: inline-block;
+            margin-top: 14px;
+            background: #1e40af;
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .pdf-link:hover{
+            background: #0ea5e9;
+        }
+
+        video{
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 12px;
+            border: 2px solid #bae6fd;
+        }
+
+        button{
+            background: #1e40af;
+            color: #ffffff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover{
+            background: #0ea5e9;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #bae6fd;
+            margin-top: 4px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Química</h1>
+    <h2>Segundo Semestre</h2>
+
+    <nav>
+        <a href="index.html">Página principal</a>
+        <a href="#informacion">Información</a>
+        <a href="#formulario">Formulario</a>
+        <a href="quimica.pdf.pdf">PDF del curso</a>
+        <a href="#parcial1">1° Parcial</a> |
+        <a href="#parcial2">2° Parcial</a> |
+        <a href="#parcial3">3° Parcial</a>
+    </nav>
+</header>
+
+<main>
+
+<a id="formulario"></a>
+<div>
+    <h2>Formulario de Opinión</h2>
+
+    <form id="formOpinion">
+        <label>
+            Nombre del alumno:
+            <input type="text" id="nombre" required>
+        </label>
+
+        <label>
+            Grupo:
+            <input type="text" id="grupo" required>
+        </label>
+
+        <label>
+            ¿Qué sabes sobre la química?
+            <textarea id="opinion" rows="4" required></textarea>
+        </label>
+
+        <br>
+        <button type="submit">Enviar formulario</button>
+    </form>
+
+    <p id="mensajeForm"></p>
+</div>
+
+<script>
+document.getElementById("formOpinion").addEventListener("submit", function(e){
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    document.getElementById("mensajeForm").innerText =
+        "Gracias " + nombre + ", tu formulario fue enviado correctamente.";
+});
+</script>
+
+
+<a id="informacion"></a>
+<div>
+    <h2>Información de la Materia</h2>
+
+    <p>
+        La materia de Química tiene como objetivo que los estudiantes comprendan
+        la composición, estructura y transformaciones de la materia, así como
+        los procesos químicos presentes en la naturaleza y la vida diaria.
+    </p>
+
+    <p>
+        Durante el curso se estudian conceptos como la materia, los átomos,
+        los elementos químicos, la tabla periódica y las reacciones químicas,
+        fomentando el pensamiento científico y el análisis lógico.
+    </p>
+
+    <p>
+        La química es fundamental para el desarrollo tecnológico, la medicina,
+        el cuidado del medio ambiente y el uso responsable de sustancias químicas.
+    </p>
+
+    <a class="pdf-link" href="quimica.pdf.pdf">Descargar PDF de Química</a>
+
+    <p>
+    Más información
+    <a href="https://www.bluebooksandmagnus.com/wp-content/uploads/2024/06/CNEYT-1-WEB.pdf">Ver mas</a>
+    </p>
+</div>
+
+<a id="parcial1"></a>
+<div>
+    <h2>Primer Parcial</h2>
+    <h3>¿Qué es la Química?</h3>
+    <p>
+        La química es la ciencia que estudia la materia, su composición,
+        estructura, propiedades y los cambios que experimenta.
+    </p>
+<h3>¿Qué es una máquina térmica?</h3>
+<p>
+    Una máquina térmica es un dispositivo que convierte el calor en trabajo,
+    funcionando gracias a la diferencia de temperatura entre dos depósitos:
+    uno caliente y uno frío.
+</p>
+
+<h3>Componentes principales de una máquina térmica</h3>
+<h4>Depósito de mayor temperatura (fuente caliente)</h4>
+<ul>
+    <li>Tiene una temperatura alta.</li>
+    <li>Es el lugar de donde entra el calor (<strong>Q₁</strong>) a la máquina.</li>
+    <li>Puede provenir de:
+        <ul>
+            <li>Combustión de combustibles</li>
+            <li>Vapor</li>
+            <li>Energía solar</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Máquina térmica</h4>
+<ul>
+    <li>Recibe el calor desde la fuente caliente.</li>
+    <li>Transforma parte del calor en trabajo (<strong>W</strong>).</li>
+    <li>El calor que no se aprovecha se libera al exterior.</li>
+</ul>
+
+<h4>Depósito de menor temperatura (fuente fría)</h4>
+<ul>
+    <li>Tiene una temperatura baja.</li>
+    <li>Recibe el calor sobrante (<strong>Q₂</strong>).</li>
+    <li>Puede ser el ambiente, el aire o el agua.</li>
+</ul>
+
+<h4>Trabajo útil (W)</h4>
+<p>
+    El trabajo útil es la energía aprovechable producida por la máquina térmica.
+</p>
+<h3>Energías renovables</h3>
+<p>
+    Las energías renovables son fuentes de energía que no se agotan y generan
+    menor contaminación.
+</p>
+
+<ul>
+    <li><strong>Energía solar:</strong> Aprovecha la radiación del Sol.</li>
+    <li><strong>Energía eólica:</strong> Utiliza la fuerza del viento.</li>
+    <li><strong>Energía hidráulica:</strong> Aprovecha el movimiento del agua.</li>
+</ul>
+
+<p>
+    Estas energías son una excelente opción para reducir la contaminación causada
+    por las máquinas térmicas tradicionales.
+</p>
+
+<hr>
+
+<h3>Ahorro de energía</h3>
+
+<h4>En casa</h4>
+<ul>
+    <li>Apagar luces y aparatos que no se utilizan.</li>
+    <li>Usar focos ahorradores.</li>
+    <li>Desconectar cargadores cuando no estén en uso.</li>
+</ul>
+
+<h4>En el transporte</h4>
+<ul>
+    <li>Usar transporte público.</li>
+    <li>Compartir el automóvil.</li>
+    <li>Reducir el uso excesivo del coche.</li>
+</ul>
+</div>
+
+
+<a id="parcial2"></a>
+<div>
+    <h2>Segundo Parcial</h2>
+<h3>Transferencia de calor</h3>
+<p>
+    La transferencia de calor es el proceso mediante el cual la energía térmica
+    pasa de un cuerpo con mayor temperatura a otro con menor temperatura.
+    Este proceso ocurre hasta que ambos cuerpos alcanzan el equilibrio térmico.
+</p>
+
+<h3>Formas de transferencia de calor</h3>
+
+<h4>Conducción</h4>
+<p>
+    La conducción ocurre cuando el calor se transmite por contacto directo
+    entre dos cuerpos.
+</p>
+<ul>
+    <li>Se presenta principalmente en sólidos.</li>
+    <li>Depende del material (los metales son buenos conductores).</li>
+</ul>
+<p>
+    <strong>Ejemplo:</strong> Una cuchara metálica se calienta al dejarla dentro
+    de una olla con agua caliente.
+</p>
+
+<h4>Convección</h4>
+<p>
+    La convección ocurre en líquidos y gases, donde el calor se transfiere
+    mediante el movimiento del fluido.
+</p>
+<ul>
+    <li>El fluido caliente asciende.</li>
+    <li>El fluido frío desciende.</li>
+</ul>
+<h4>Radiación</h4>
+<p>
+    La radiación no necesita un medio material para propagarse, ya que se
+    transmite mediante ondas electromagnéticas.
+</p>
+<ul>
+    <li>Todos los cuerpos emiten radiación según su temperatura.</li>
+</ul>
+<p>
+    <strong>Ejemplo:</strong> El calor del Sol que llega a la Tierra.
+</p>
+<hr>
+
+<h3>Fuentes de energía</h3>
+<p>
+    La energía es la capacidad de realizar trabajo. Se clasifica principalmente
+    en energías renovables y no renovables.
+</p>
+
+<h4>Energías renovables</h4>
+<p>
+    Son fuentes de energía que no se agotan o se regeneran de manera natural.
+</p>
+<ul>
+    <li>Hidráulica</li>
+    <li>Solar</li>
+    <li>Eólica</li>
+    <li>Geotérmica</li>
+    <li>Biomasa</li>
+</ul>
+
+<h4>Ventajas de las energías renovables</h4>
+<ul>
+    <li>Contaminan menos.</li>
+    <li>Reducen las emisiones de gases de efecto invernadero.</li>
+    <li>Son más sostenibles a largo plazo.</li>
+</ul>
+
+<h4>Energías no renovables</h4>
+<p>
+    Son recursos energéticos que se agotan con el uso y tardan millones de años
+    en formarse.
+</p>
+<ul>
+    <li>Carbón</li>
+    <li>Petróleo</li>
+    <li>Gas natural</li>
+    <li>Uranio (energía nuclear)</li>
+</ul>
+
+<h4>Desventajas de las energías no renovables</h4>
+<ul>
+    <li>Producen contaminación.</li>
+    <li>Generan dióxido de carbono (CO₂).</li>
+    <li>Contribuyen al cambio climático.</li>
+</ul>
+<hr>
+
+<h3>Cambio climático</h3>
+
+<h4>¿Qué es el cambio climático?</h4>
+<p>
+    El cambio climático es la variación a largo plazo de la temperatura promedio
+    del planeta, causada principalmente por actividades humanas.
+</p>
+<p>
+    Esto provoca:
+</p>
+<ul>
+    <li>Aumento de la temperatura global.</li>
+    <li>Derretimiento de glaciares.</li>
+    <li>Cambios en el clima.</li>
+    <li>Fenómenos extremos como sequías e inundaciones.</li>
+</ul>
+
+<h4>Transferencia de calor y cambio climático</h4>
+<p>
+    El Sol calienta la Tierra por radiación y la Tierra libera parte de ese calor
+    al espacio. Sin embargo, los gases de efecto invernadero retienen una parte
+    del calor.
+</p>
+
+<p>
+    Cuando aumenta la cantidad de estos gases, se rompe el equilibrio térmico y
+    se produce el calentamiento global.
+</p>
+
+<hr>
+
+<h3>¿Cómo reducir el cambio climático?</h3>
+<ul>
+    <li>Utilizar energías renovables.</li>
+    <li>Reducir el uso de combustibles fósiles.</li>
+    <li>Ahorrar energía en casa y en el transporte.</li>
+    <li>Mejorar la eficiencia de las máquinas térmicas.</li>
+</ul>
+</div>
+
+
+<a id="parcial3"></a>
+<div>
+    <h2>Tercer Parcial</h2>
+   <h3>Pirámide trófica</h3>
+<p>
+    La pirámide trófica representa cómo fluye la energía y la materia dentro de un
+    ecosistema. Muestra los diferentes niveles de alimentación y cómo la cantidad
+    de energía disminuye conforme se avanza en la cadena alimenticia.
+</p>
+
+<h3>Niveles tróficos</h3>
+
+<h4>Productores</h4>
+<p>
+    Los productores son organismos autótrofos que elaboran su propio alimento
+    mediante la fotosíntesis.
+</p>
+<ul>
+    <li>Son la base de la pirámide trófica.</li>
+    <li>Transforman la energía solar en energía química.</li>
+</ul>
+<p>
+    <strong>Ejemplos:</strong> Plantas y algas.
+</p>
+
+<h4>Consumidores primarios</h4>
+<p>
+    Los consumidores primarios son animales herbívoros que se alimentan
+    directamente de los productores.
+</p>
+<ul>
+    <li>Obtienen energía de las plantas.</li>
+</ul>
+<p>
+    <strong>Ejemplos:</strong> Conejos, venados e insectos.
+</p>
+
+<h4>Consumidores secundarios</h4>
+<p>
+    Los consumidores secundarios son carnívoros que se alimentan de los
+    consumidores primarios.
+</p>
+<p>
+    <strong>Ejemplos:</strong> Serpientes y ranas.
+</p>
+
+<h4>Consumidores terciarios</h4>
+<p>
+    Los consumidores terciarios son depredadores que se alimentan de consumidores
+    secundarios.
+</p>
+<p>
+    <strong>Ejemplos:</strong> Águilas y tiburones.
+</p>
+
+<h4>Depredador tope</h4>
+<p>
+    El depredador tope se encuentra en la cima de la pirámide trófica y no tiene
+    depredadores naturales.
+</p>
+<p>
+    <strong>Ejemplos:</strong> Tiburón y orca.
+</p>
+
+<h3>Flujo de energía en la pirámide</h3>
+<ul>
+    <li>La energía disminuye en cada nivel trófico.</li>
+    <li>Solo una pequeña parte de la energía pasa al siguiente nivel.</li>
+    <li>El resto de la energía se pierde en forma de calor.</li>
+</ul>
+
+<hr>
+<h3>Ondas</h3>
+<h4>¿Qué es una onda?</h4>
+<p>
+    Una onda es una perturbación que se propaga transportando energía, pero no
+    materia.
+</p>
+
+<h3>Tipos de ondas</h3>
+<h4>Ondas mecánicas</h4>
+<p>
+    Las ondas mecánicas necesitan un medio material para propagarse.
+</p>
+<ul>
+    <li>No pueden viajar en el vacío.</li>
+</ul>
+<p>
+    <strong>Ejemplos:</strong>
+</p>
+<ul>
+    <li>Ondas sonoras</li>
+    <li>Ondas en el agua</li>
+</ul>
+<h4>Ondas electromagnéticas</h4>
+<p>
+    Las ondas electromagnéticas no necesitan un medio material y pueden
+    propagarse en el vacío.
+</p>
+<ul>
+    <li>Están formadas por campos eléctricos y magnéticos.</li>
+</ul>
+<p>
+    <strong>Ejemplos:</strong>
+</p>
+<ul>
+    <li>Luz visible</li>
+    <li>Ondas de radio</li>
+    <li>Microondas</li>
+    <li>Rayos X</li>
+    <li>Rayos gamma</li>
+</ul>
+<h3>Espectro electromagnético</h3>
+<p>
+    El espectro electromagnético ordena las ondas de menor a mayor energía:
+</p>
+<ul>
+    <li>Ondas de radio</li>
+    <li>Microondas</li>
+    <li>Infrarrojo</li>
+    <li>Luz visible</li>
+    <li>Ultravioleta</li>
+    <li>Rayos X</li>
+    <li>Rayos gamma</li>
+</ul>
+<p>
+</div>
+
+
+<div>
+    <h2>Video de apoyo</h2>
+    <video src="quimica.mp4" controls>
+        Tu navegador no soporta el video.
+    </video>
+</div>
+
+<div>
+    <h2>Cuestionario de Evaluación</h2>
+<form id="quizForm">
+<ol>
+<li>
+¿Qué es una máquina térmica?<br>
+<label><input type="radio" name="p1" value="A"> A) Un dispositivo que convierte calor en trabajo</label><br>
+<label><input type="radio" name="p1" value="B"> B) Un aparato eléctrico</label>
+<label><input type="radio" name="p1" value="C"> C) Un tipo de energía</label>
+<label><input type="radio" name="p1" value="D"> D) Una fuente renovable</label>
+</li>
+
+<li>
+¿Qué se necesita para que funcione una máquina térmica?<br>
+<label><input type="radio" name="p2" value="A"> A) Diferencia de temperatura</label><br>
+<label><input type="radio" name="p2" value="B"> B) Electricidad</label>
+<label><input type="radio" name="p2" value="C"> C) Agua fría</label>
+<label><input type="radio" name="p2" value="D"> D) Energía solar</label>
+</li>
+
+<li>
+¿Por qué una máquina térmica no puede tener 100% de eficiencia?<br>
+<label><input type="radio" name="p3" value="A"> A) Porque siempre hay pérdidas de calor</label><br>
+<label><input type="radio" name="p3" value="B"> B) Porque no usa electricidad</label>
+<label><input type="radio" name="p3" value="C"> C) Porque se apaga</label>
+<label><input type="radio" name="p3" value="D"> D) Porque es renovable</label>
+</li>
+
+<li>
+¿Cuál es un combustible fósil?<br>
+<label><input type="radio" name="p4" value="A"> A) Petróleo</label><br>
+<label><input type="radio" name="p4" value="B"> B) Viento</label>
+<label><input type="radio" name="p4" value="C"> C) Sol</label>
+<label><input type="radio" name="p4" value="D"> D) Agua</label>
+</li>
+
+<li>
+¿Qué gas contribuye al efecto invernadero?<br>
+<label><input type="radio" name="p5" value="A"> A) Dióxido de carbono (CO₂)</label><br>
+<label><input type="radio" name="p5" value="B"> B) Oxígeno</label>
+<label><input type="radio" name="p5" value="C"> C) Nitrógeno</label>
+<label><input type="radio" name="p5" value="D"> D) Helio</label>
+</li>
+
+<li>
+¿Qué es la transferencia de calor?<br>
+<label><input type="radio" name="p6" value="A"> A) Paso de energía térmica de un cuerpo a otro</label><br>
+<label><input type="radio" name="p6" value="B"> B) Producción de electricidad</label>
+<label><input type="radio" name="p6" value="C"> C) Movimiento mecánico</label>
+<label><input type="radio" name="p6" value="D"> D) Cambio químico</label>
+</li>
+
+<li>
+¿Qué tipo de transferencia ocurre por contacto directo?<br>
+<label><input type="radio" name="p7" value="A"> A) Conducción</label><br>
+<label><input type="radio" name="p7" value="B"> B) Radiación</label>
+<label><input type="radio" name="p7" value="C"> C) Convección</label>
+<label><input type="radio" name="p7" value="D"> D) Evaporación</label>
+</li>
+
+<li>
+¿Qué tipo de transferencia ocurre en líquidos y gases?<br>
+<label><input type="radio" name="p8" value="A"> A) Convección</label><br>
+<label><input type="radio" name="p8" value="B"> B) Conducción</label>
+<label><input type="radio" name="p8" value="C"> C) Radiación</label>
+<label><input type="radio" name="p8" value="D"> D) Fricción</label>
+</li>
+
+<li>
+¿Qué tipo de transferencia no necesita medio material?<br>
+<label><input type="radio" name="p9" value="A"> A) Radiación</label><br>
+<label><input type="radio" name="p9" value="B"> B) Conducción</label>
+<label><input type="radio" name="p9" value="C"> C) Convección</label>
+<label><input type="radio" name="p9" value="D"> D) Evaporación</label>
+</li>
+
+<li>
+¿Qué es una central termoeléctrica?<br>
+<label><input type="radio" name="p10" value="A"> A) Una planta que produce electricidad a partir de calor</label><br>
+<label><input type="radio" name="p10" value="B"> B) Una energía renovable</label>
+<label><input type="radio" name="p10" value="C"> C) Un panel solar</label>
+<label><input type="radio" name="p10" value="D"> D) Una batería</label>
+</li>
+
+<li>
+¿Qué es una pirámide trófica?<br>
+<label><input type="radio" name="p11" value="A"> A) Representación del flujo de energía en un ecosistema</label><br>
+<label><input type="radio" name="p11" value="B"> B) Un tipo de energía</label>
+<label><input type="radio" name="p11" value="C"> C) Un ecosistema</label>
+<label><input type="radio" name="p11" value="D"> D) Un animal</label>
+</li>
+
+<li>
+¿Quiénes son los productores?<br>
+<label><input type="radio" name="p12" value="A"> A) Plantas y algas</label><br>
+<label><input type="radio" name="p12" value="B"> B) Carnívoros</label>
+<label><input type="radio" name="p12" value="C"> C) Humanos</label>
+<label><input type="radio" name="p12" value="D"> D) Bacterias</label>
+</li>
+
+<li>
+¿Qué tipo de consumidores comen plantas?<br>
+<label><input type="radio" name="p13" value="A"> A) Consumidores primarios</label><br>
+<label><input type="radio" name="p13" value="B"> B) Secundarios</label>
+<label><input type="radio" name="p13" value="C"> C) Terciarios</label>
+<label><input type="radio" name="p13" value="D"> D) Depredadores tope</label>
+</li>
+
+<li>
+¿Qué pasa con la energía al subir de nivel trófico?<br>
+<label><input type="radio" name="p14" value="A"> A) Disminuye</label><br>
+<label><input type="radio" name="p14" value="B"> B) Aumenta</label>
+<label><input type="radio" name="p14" value="C"> C) Se mantiene igual</label>
+<label><input type="radio" name="p14" value="D"> D) Desaparece</label>
+</li>
+
+<li>
+¿Qué es una onda?<br>
+<label><input type="radio" name="p15" value="A"> A) Una perturbación que transporta energía</label><br>
+<label><input type="radio" name="p15" value="B"> B) Una partícula</label>
+<label><input type="radio" name="p15" value="C"> C) Un átomo</label>
+<label><input type="radio" name="p15" value="D"> D) Un gas</label>
+</li>
+
+<li>
+¿Qué tipo de ondas necesitan un medio material?<br>
+<label><input type="radio" name="p16" value="A"> A) Ondas mecánicas</label><br>
+<label><input type="radio" name="p16" value="B"> B) Electromagnéticas</label>
+<label><input type="radio" name="p16" value="C"> C) Luminosas</label>
+<label><input type="radio" name="p16" value="D"> D) Solares</label>
+</li>
+
+<li>
+¿Cuál es una onda electromagnética?<br>
+<label><input type="radio" name="p17" value="A"> A) Luz visible</label><br>
+<label><input type="radio" name="p17" value="B"> B) Sonido</label>
+<label><input type="radio" name="p17" value="C"> C) Olas del mar</label>
+<label><input type="radio" name="p17" value="D"> D) Vibración</label>
+</li>
+
+<li>
+¿Qué radiación emite principalmente la Tierra?<br>
+<label><input type="radio" name="p18" value="A"> A) Infrarroja</label><br>
+<label><input type="radio" name="p18" value="B"> B) Ultravioleta</label>
+<label><input type="radio" name="p18" value="C"> C) Rayos X</label>
+<label><input type="radio" name="p18" value="D"> D) Gamma</label>
+</li>
+
+<li>
+¿Cómo se puede reducir el cambio climático?<br>
+<label><input type="radio" name="p19" value="A"> A) Usando energías renovables</label><br>
+<label><input type="radio" name="p19" value="B"> B) Usando más combustibles fósiles</label>
+<label><input type="radio" name="p19" value="C"> C) Contaminando más</label>
+<label><input type="radio" name="p19" value="D"> D) Desperdiciando energía</label>
+</li>
+
+<li>
+¿Qué acción ayuda al ahorro de energía?<br>
+<label><input type="radio" name="p20" value="A"> A) Apagar aparatos que no se usan</label><br>
+<label><input type="radio" name="p20" value="B"> B) Dejar luces encendidas</label>
+<label><input type="radio" name="p20" value="C"> C) Usar más gasolina</label>
+<label><input type="radio" name="p20" value="D"> D) Desperdiciar agua</label>
+</li>
+</ol>
+<button type="submit">Enviar cuestionario</button>
+</form>
+
+<p id="resultado"></p>
+
+<script>
+const correctAnswers = {
+    p1:"A", p2:"A", p3:"A", p4:"A", p5:"A",
+    p6:"A", p7:"A", p8:"A", p9:"A", p10:"A",
+    p11:"A", p12:"A", p13:"A", p14:"A", p15:"A",
+    p16:"A", p17:"A", p18:"A", p19:"A", p20:"A"
+};
+
+document.getElementById("quizForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    let score = 0;
+
+    for(let q in correctAnswers){
+        const ans = document.querySelector(`input[name="${q}"]:checked`);
+        if(ans && ans.value === correctAnswers[q]) score++;
+    }
+
+    document.getElementById("resultado").innerText =
+        "Tu calificación es: " + score + " / 20";
+});
+</script>
+
+</div>
+</main>
+</body>
+</html>

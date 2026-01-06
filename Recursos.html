@@ -1,0 +1,464 @@
+<html>
+<head>
+    <title>Recursos Socioemocionales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        video{
+            width: 100%;
+        }
+        /* estilo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        header {
+            background: #1e293b;
+            color: #22c55e;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+            border-bottom: 2px solid #22c55e;
+        }
+
+        nav {
+            background: #0f172a;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 18px;
+            padding: 8px 12px;
+            transition: 0.3s;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            background: #1e293b;
+            color: #22c55e;
+        }
+
+        main {
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #22c55e;
+            border-left: 4px solid #22c55e;
+            padding-left: 10px;
+        }
+
+        .informacion, .cuestionario, main > div {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 14px;
+            margin-top: 25px;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .pdf-link {
+            display: inline-block;
+            margin-top: 14px;
+            background: #22c55e;
+            color: #0f172a;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .pdf-link:hover, a[href$=".pdf"]:hover {
+            background: #0d8309;
+
+        }
+        button {
+            background: #22c55e;
+            color: #0f172a;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e293b;
+            color: #e2e8f0;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 2px solid #22c55e;
+        }
+    </style>
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("formRegistro").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const grupo = document.getElementById("grupo").value;
+
+        document.getElementById("mensajeForm").innerText =
+            "✅ Gracias " + nombre + " del grupo " + grupo +
+            ". El formulario fue enviado correctamente.";
+    });
+});
+</script>
+
+
+<body>
+<header>
+    <h1>Recursos Socioemocionales</h1>
+    <h2>Selecciona el parcial</h2>
+
+    <nav>
+        <a href="index.html">Página principal</a>
+        <a href="#informacion">Información</a>
+        <a href="#formulario">Formulario</a>
+        <a href="RECURSOS SOCIOEMOCIONALES.pdf">PDF del curso</a>
+        <a href="#parcial1">1° Parcial</a> |
+        <a href="#parcial2">2° Parcial</a> |
+        <a href="#parcial3">3° Parcial</a>
+    </nav>
+</header>
+
+<main>
+    <div>
+       <a id="formulario"></a>
+    <div id="formulario">
+    <h2>Formulario de Opinión</h2>
+
+    <form id="formOpinion">
+        <label>
+            Nombre del alumno:
+            <br>
+            <input type="text" id="nombre" required>
+        </label>
+        <br><br>
+
+        <label>
+            Grupo:
+            <br>
+            <input type="text" id="grupo" required>
+        </label>
+        <br><br>
+
+        <label>
+            ¿Qué sabes de tus emociones?
+            <br>
+            <textarea id="opinion" rows="4" required></textarea>
+        </label>
+        <br><br>
+
+        <button type="submit">Enviar formulario</button>
+    </form>
+
+    <p id="mensajeForm"></p>
+
+<script>
+document.getElementById("formOpinion").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+
+    document.getElementById("mensajeForm").innerText =
+        "Gracias " + nombre + ", tu formulario fue enviado correctamente.";
+});
+</script>
+    </div>
+
+    <a id="informacion"></a>
+    <h2>Información de la Materia</h2>
+    <p>
+    La materia de Recursos Socioemocionales tiene como propósito que los
+    estudiantes identifiquen, comprendan y expresen sus emociones de manera
+    adecuada, fortaleciendo su bienestar personal y la convivencia con los
+    demás.
+</p>
+<p>
+    A lo largo del semestre se trabajan temas relacionados con los sentimientos,
+    las emociones, la autoestima y la forma en la que reaccionamos ante distintas
+    situaciones de la vida cotidiana.
+</p>
+    <div>
+        <a class="pdf-link" href="RECURSOS SOCIOEMOCIONALES.pdf">
+            Descargar PDF de la materia
+        </a>
+    </div>
+
+    <a id="parcial1"></a>
+    <div>
+         <h2>Primer Parcial</h2>
+
+<h3>¿Qué son las emociones?</h3>
+<p>
+    Las emociones son reacciones que experimentamos ante diferentes situaciones
+    y nos ayudan a expresar cómo nos sentimos. Todas las emociones son normales
+    y cumplen una función importante en nuestra vida.
+</p>
+<h3>Emociones básicas</h3>
+<ul>
+    <li>Alegría</li>
+    <li>Tristeza</li>
+    <li>Miedo</li>
+    <li>Enojo</li>
+    <li>Sorpresa</li>
+</ul>
+<h3>Importancia de las emociones</h3>
+<ul>
+    <li>Nos permiten expresar lo que sentimos.</li>
+    <li>Influyen en nuestras decisiones.</li>
+    <li>Afectan nuestra conducta y relaciones.</li>
+    <li>Ayudan a comprender a los demás.</li>
+</ul>
+    </div>
+
+    <a id="parcial2"></a>
+    <div>
+   <h2>Segundo Parcial</h2>
+   <h3>Identificación de emociones</h3>
+<p>
+    Reconocer cómo nos sentimos es importante para poder manejar nuestras
+    emociones de forma saludable. Identificar nuestras emociones nos ayuda
+    a evitar reacciones impulsivas.
+</p>
+<ul>
+    <li>Reconocer lo que sentimos en diferentes situaciones.</li>
+    <li>Expresar emociones de manera adecuada.</li>
+    <li>Comprender por qué nos sentimos de cierta forma.</li>
+    <li>Aprender a escuchar a los demás.</li>
+</ul>
+<h3>Autoestima</h3>
+<p>
+    La autoestima es la valoración que tenemos de nosotros mismos. Una buena
+    autoestima ayuda a enfrentar problemas, tomar decisiones y relacionarnos
+    mejor con otras personas.
+</p>
+
+    </div>
+
+    <a id="parcial3"></a>
+    <div>
+<h2>Tercer Parcial</h2>
+<h3>Manejo de emociones</h3>
+<p>
+    Manejar las emociones consiste en aprender a controlarlas y expresarlas de
+    manera correcta, especialmente en situaciones difíciles o de conflicto.
+</p>
+
+<ul>
+    <li>Respirar profundamente para calmarse.</li>
+    <li>Hablar sobre lo que sentimos.</li>
+    <li>Evitar reaccionar con violencia.</li>
+    <li>Buscar apoyo cuando sea necesario.</li>
+</ul>
+
+<h3>Convivencia</h3>
+<p>
+    Una buena gestión emocional favorece la convivencia, el respeto y la
+    comunicación entre las personas dentro de la escuela y la sociedad.
+</p>
+    </div>
+
+
+    <div>
+         <video src="recursos.mp4" controls width="100%">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+    </div>
+
+<form id="quizForm">
+    <h2>Cuestionario final</h2>
+    <ol>
+        <li>
+            ¿Qué son las emociones?<br>
+            <label><input type="radio" name="p1" value="A"> A) Reacciones que expresan cómo nos sentimos</label><br>
+            <label><input type="radio" name="p1" value="B"> B) Enfermedades</label><br>
+            <label><input type="radio" name="p1" value="C"> C) Objetos</label><br>
+            <label><input type="radio" name="p1" value="D"> D) Pensamientos</label>
+        </li>
+        <li>
+            ¿Cuál es una emoción básica?<br>
+            <label><input type="radio" name="p2" value="A"> A) Alegría</label><br>
+            <label><input type="radio" name="p2" value="B"> B) Hambre</label><br>
+            <label><input type="radio" name="p2" value="C"> C) Sueño</label><br>
+            <label><input type="radio" name="p2" value="D"> D) Frío</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos cuando algo nos asusta?<br>
+            <label><input type="radio" name="p3" value="A"> A) Miedo</label><br>
+            <label><input type="radio" name="p3" value="B"> B) Amor</label><br>
+            <label><input type="radio" name="p3" value="C"> C) Alegría</label><br>
+            <label><input type="radio" name="p3" value="D"> D) Calma</label>
+        </li>
+        <li>
+            ¿Qué emoción se relaciona con sentirse bien?<br>
+            <label><input type="radio" name="p4" value="A"> A) Felicidad</label><br>
+            <label><input type="radio" name="p4" value="B"> B) Tristeza</label><br>
+            <label><input type="radio" name="p4" value="C"> C) Enojo</label><br>
+            <label><input type="radio" name="p4" value="D"> D) Miedo</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos cuando perdemos algo importante?<br>
+            <label><input type="radio" name="p5" value="A"> A) Tristeza</label><br>
+            <label><input type="radio" name="p5" value="B"> B) Alegría</label><br>
+            <label><input type="radio" name="p5" value="C"> C) Orgullo</label><br>
+            <label><input type="radio" name="p5" value="D"> D) Calma</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos cuando algo nos molesta mucho?<br>
+            <label><input type="radio" name="p6" value="A"> A) Enojo</label><br>
+            <label><input type="radio" name="p6" value="B"> B) Amor</label><br>
+            <label><input type="radio" name="p6" value="C"> C) Alegría</label><br>
+            <label><input type="radio" name="p6" value="D"> D) Tranquilidad</label>
+        </li>
+        <li>
+            ¿Para qué sirve reconocer nuestras emociones?<br>
+            <label><input type="radio" name="p7" value="A"> A) Para manejarlas mejor</label><br>
+            <label><input type="radio" name="p7" value="B"> B) Para ignorarlas</label><br>
+            <label><input type="radio" name="p7" value="C"> C) Para esconderlas</label><br>
+            <label><input type="radio" name="p7" value="D"> D) Para evitarlas</label>
+        </li>
+        <li>
+            ¿Qué ayuda a controlar el enojo?<br>
+            <label><input type="radio" name="p8" value="A"> A) Respirar profundamente</label><br>
+            <label><input type="radio" name="p8" value="B"> B) Gritar</label><br>
+            <label><input type="radio" name="p8" value="C"> C) Golpear</label><br>
+            <label><input type="radio" name="p8" value="D"> D) Ignorar a todos</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos al lograr una meta?<br>
+            <label><input type="radio" name="p9" value="A"> A) Orgullo</label><br>
+            <label><input type="radio" name="p9" value="B"> B) Miedo</label><br>
+            <label><input type="radio" name="p9" value="C"> C) Tristeza</label><br>
+            <label><input type="radio" name="p9" value="D"> D) Enojo</label>
+        </li>
+        <li>
+            ¿Qué emoción se siente cuando estamos relajados?<br>
+            <label><input type="radio" name="p10" value="A"> A) Calma</label><br>
+            <label><input type="radio" name="p10" value="B"> B) Miedo</label><br>
+            <label><input type="radio" name="p10" value="C"> C) Enojo</label><br>
+            <label><input type="radio" name="p10" value="D"> D) Tristeza</label>
+        </li>
+        <li>
+            ¿Qué emoción se relaciona con querer a alguien?<br>
+            <label><input type="radio" name="p11" value="A"> A) Amor</label><br>
+            <label><input type="radio" name="p11" value="B"> B) Miedo</label><br>
+            <label><input type="radio" name="p11" value="C"> C) Enojo</label><br>
+            <label><input type="radio" name="p11" value="D"> D) Estrés</label>
+        </li>
+        <li>
+            ¿Qué emoción aparece cuando estamos nerviosos?<br>
+            <label><input type="radio" name="p12" value="A"> A) Ansiedad</label><br>
+            <label><input type="radio" name="p12" value="B"> B) Alegría</label><br>
+            <label><input type="radio" name="p12" value="C"> C) Orgullo</label><br>
+            <label><input type="radio" name="p12" value="D"> D) Amor</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos cuando algo nos da risa?<br>
+            <label><input type="radio" name="p13" value="A"> A) Alegría</label><br>
+            <label><input type="radio" name="p13" value="B"> B) Tristeza</label><br>
+            <label><input type="radio" name="p13" value="C"> C) Miedo</label><br>
+            <label><input type="radio" name="p13" value="D"> D) Enojo</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos al recibir una mala noticia?<br>
+            <label><input type="radio" name="p14" value="A"> A) Tristeza</label><br>
+            <label><input type="radio" name="p14" value="B"> B) Felicidad</label><br>
+            <label><input type="radio" name="p14" value="C"> C) Orgullo</label><br>
+            <label><input type="radio" name="p14" value="D"> D) Calma</label>
+        </li>
+        <li>
+            ¿Qué emoción se siente cuando estamos satisfechos?<br>
+            <label><input type="radio" name="p15" value="A"> A) Bienestar</label><br>
+            <label><input type="radio" name="p15" value="B"> B) Enojo</label><br>
+            <label><input type="radio" name="p15" value="C"> C) Miedo</label><br>
+            <label><input type="radio" name="p15" value="D"> D) Tristeza</label>
+        </li>
+        <li>
+            ¿Qué emoción aparece cuando algo es injusto?<br>
+            <label><input type="radio" name="p16" value="A"> A) Enojo</label><br>
+            <label><input type="radio" name="p16" value="B"> B) Amor</label><br>
+            <label><input type="radio" name="p16" value="C"> C) Alegría</label><br>
+            <label><input type="radio" name="p16" value="D"> D) Calma</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos al sentirnos seguros?<br>
+            <label><input type="radio" name="p17" value="A"> A) Tranquilidad</label><br>
+            <label><input type="radio" name="p17" value="B"> B) Miedo</label><br>
+            <label><input type="radio" name="p17" value="C"> C) Enojo</label><br>
+            <label><input type="radio" name="p17" value="D"> D) Ansiedad</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos cuando extrañamos a alguien?<br>
+            <label><input type="radio" name="p18" value="A"> A) Nostalgia</label><br>
+            <label><input type="radio" name="p18" value="B"> B) Alegría</label><br>
+            <label><input type="radio" name="p18" value="C"> C) Orgullo</label><br>
+            <label><input type="radio" name="p18" value="D"> D) Calma</label>
+        </li>
+        <li>
+            ¿Qué emoción sentimos cuando algo nos sorprende?<br>
+            <label><input type="radio" name="p19" value="A"> A) Sorpresa</label><br>
+            <label><input type="radio" name="p19" value="B"> B) Tristeza</label><br>
+            <label><input type="radio" name="p19" value="C"> C) Miedo</label><br>
+            <label><input type="radio" name="p19" value="D"> D) Enojo</label>
+        </li>
+        <li>
+            ¿Por qué es importante expresar emociones?<br>
+            <label><input type="radio" name="p20" value="A"> A) Para mantener una buena salud emocional</label><br>
+            <label><input type="radio" name="p20" value="B"> B) Para causar problemas</label><br>
+            <label><input type="radio" name="p20" value="C"> C) Para discutir</label><br>
+            <label><input type="radio" name="p20" value="D"> D) Para ignorarlas</label>
+        </li>
+    </ol>
+    <br>
+    <button type="submit">Enviar respuestas</button>
+</form>
+<p id="resultado"></p>
+
+
+
+
+<script>
+    const correctAnswers = {
+        p1:"A", p2:"A", p3:"A", p4:"A", p5:"A",
+        p6:"A", p7:"A", p8:"A", p9:"A", p10:"A",
+        p11:"A", p12:"A", p13:"A", p14:"A", p15:"A",
+        p16:"A", p17:"A", p18:"A", p19:"A", p20:"A"
+    };
+
+    document.getElementById("quizForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        for(let q in correctAnswers){
+            const ans = document.querySelector(`input[name="${q}"]:checked`);
+            if(ans && ans.value === correctAnswers[q]) score++;
+        }
+        document.getElementById("resultado").innerText = "Tu calificación es: " + score + "/20";
+    });
+</script>
+</main>
+</body>
+</html>
