@@ -1,0 +1,747 @@
+<html>
+<head>
+    <title>Cultura Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8fafc;
+            color: #1f2937;
+        }
+
+        header{
+            background: #ede9fe;
+            color: #5b21b6;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 3px solid #7c3aed;
+        }
+
+        nav{
+            background: #ffffff;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        nav a{
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            background: #ede9fe;
+            color: #5b21b6;
+        }
+
+        main{
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2{
+            color: #5b21b6;
+            border-left: 4px solid #7c3aed;
+            padding-left: 10px;
+        }
+
+        h3{
+            color: #4c1d95;
+        }
+
+        main > div{
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 14px;
+            margin-top: 25px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        ul li{
+            margin-bottom: 8px;
+        }
+
+        .pdf-link{
+            display: inline-block;
+            margin-top: 14px;
+            background: #7c3aed;
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .pdf-link:hover{
+            background: #5b21b6;
+        }
+
+        video{
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        button{
+            background: #7c3aed;
+            color: #ffffff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover{
+            background: #5b21b6;
+        }
+    </style>
+</head>
+
+<body>
+<body>
+<header>
+    <h1>Cultura Digital</h1>
+    <h2>Selecciona el parcial</h2>
+
+    <nav>
+        <a href="index.html">Página principal</a>
+        <a href="#informacion">Información</a>
+        <a href="#formulario">Formulario basico</a>
+        <a href="CULTURA_DIGITAL.pdf.pdf">PDF del curso</a>
+        <a href="#parcial1">1° Parcial</a> |
+        <a href="#parcial2">2° Parcial</a> |
+        <a href="#parcial3">3° Parcial</a>
+    </nav>
+</header>
+
+<main>
+    <a id="formulario"></a>
+    <div id="formulario">
+    <h2>Formulario de Opinión</h2>
+
+    <form id="formOpinion">
+        <label>
+            Nombre del alumno:
+            <br>
+            <input type="text" id="nombre" required>
+        </label>
+        <br><br>
+
+        <label>
+            Grupo:
+            <br>
+            <input type="text" id="grupo" required>
+        </label>
+        <br><br>
+
+        <label>
+            ¿Qué aprendiste en Cultura Digital?
+            <br>
+            <textarea id="opinion" rows="4" required></textarea>
+        </label>
+        <br><br>
+
+        <button type="submit">Enviar formulario</button>
+    </form>
+
+    <p id="mensajeForm"></p>
+
+<script>
+document.getElementById("formOpinion").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+
+    document.getElementById("mensajeForm").innerText =
+        "Gracias " + nombre + ", tu formulario fue enviado correctamente.";
+});
+</script>
+</div>
+
+
+
+    <a id="informacion"></a>
+    <div>
+        <h2>Información de la Materia</h2>
+        <p>
+            La materia de Cultura Digital tiene como objetivo que los estudiantes
+            comprendan el uso responsable de la tecnología, el internet y las
+            herramientas digitales en la vida cotidiana y escolar.
+        </p>
+        <p>
+            Se analizan temas como la identidad digital, la seguridad en línea,
+            la comunicación digital y el impacto de la tecnología en la sociedad.
+        </p>
+
+        <a class="pdf-link" href="CULTURA_DIGITAL.pdf.pdf">Descargar PDF de la materia</a>
+    </div>
+
+    <a id="parcial1"></a>
+    <div>
+        <h2>Primer Parcial</h2>
+
+        <h3>¿Qué es la Cultura Digital?</h3>
+        <p>
+            La cultura digital se refiere a la forma en que las personas utilizan
+            la tecnología digital para comunicarse, aprender, trabajar y convivir
+            dentro de la sociedad.
+        </p>
+
+        <h3>Elementos de la cultura digital</h3>
+        <ul>
+            <li>Uso de internet y redes sociales.</li>
+            <li>Comunicación digital.</li>
+            <li>Acceso a la información.</li>
+            <li>Identidad digital.</li>
+            <li>Uso responsable de la tecnología.</li>
+        </ul>
+<div>
+    <h3>¿Qué es la Cultura Digital?</h3>
+    <p>
+        La cultura digital es el conjunto de conocimientos, habilidades,
+        valores y prácticas que permiten a las personas interactuar de manera
+        responsable y eficiente con la tecnología digital.
+    </p>
+    <p>
+        Incluye el uso de dispositivos electrónicos, internet, redes sociales
+        y herramientas digitales para comunicarse, aprender y resolver
+        problemas en la vida diaria.
+    </p>
+
+    <h3>Importancia de la Cultura Digital</h3>
+    <ul>
+        <li>Facilita la comunicación entre personas.</li>
+        <li>Permite acceder a información rápidamente.</li>
+        <li>Mejora el aprendizaje y la educación.</li>
+        <li>Ayuda a usar la tecnología de forma responsable.</li>
+        <li>Fomenta el pensamiento crítico.</li>
+    </ul>
+
+    <h3>Uso responsable de la tecnología</h3>
+    <p>
+        Usar la tecnología de manera responsable implica respetar a los demás,
+        cuidar la información personal y evitar el mal uso de las redes
+        sociales y dispositivos digitales.
+    </p>
+
+    <ul>
+        <li>No compartir información personal.</li>
+        <li>Respetar opiniones de otras personas.</li>
+        <li>No realizar ciberacoso.</li>
+        <li>Usar contraseñas seguras.</li>
+        <li>Verificar la información antes de compartirla.</li>
+    </ul>
+
+    <h3>¿Qué es la investigación?</h3>
+    <p>
+        La investigación es un proceso mediante el cual se busca obtener
+        información confiable sobre un tema, con el objetivo de aprender,
+        resolver problemas o ampliar conocimientos.
+    </p>
+
+    <h3>Tipos de investigación</h3>
+
+    <h4>Investigación documental</h4>
+    <p>
+        Se basa en la búsqueda y análisis de información obtenida de libros,
+        revistas, páginas web, artículos y documentos digitales.
+    </p>
+
+    <h4>Investigación de campo</h4>
+    <p>
+        Consiste en recopilar información directamente del lugar donde ocurren
+        los hechos, mediante encuestas, entrevistas u observación.
+    </p>
+
+    <h4>Investigación experimental</h4>
+    <p>
+        Se realiza cuando el investigador experimenta y modifica variables
+        para observar resultados, generalmente en laboratorios o prácticas
+        controladas.
+    </p>
+
+    <h4>Investigación descriptiva</h4>
+    <p>
+        Su objetivo es describir características de una situación, persona o
+        fenómeno sin modificarlo.
+    </p>
+
+    <h4>Investigación exploratoria</h4>
+    <p>
+        Se utiliza cuando el tema es poco conocido y se busca obtener
+        información general para comprenderlo mejor.
+    </p>
+
+    <h3>Importancia de la investigación</h3>
+    <ul>
+        <li>Permite adquirir nuevos conocimientos.</li>
+        <li>Ayuda a resolver problemas.</li>
+        <li>Fomenta el pensamiento crítico.</li>
+        <li>Mejora el aprendizaje escolar.</li>
+        <li>Permite tomar decisiones informadas.</li>
+    </ul>
+</div>
+    </div>
+
+    <a id="parcial2"></a>
+<h2>Segundo Parcial</h2>
+    <h3>Lenguaje HTML y CSS</h3>
+
+<h4>¿Qué es HTML?</h4>
+<p>
+    HTML (HyperText Markup Language) es un lenguaje de marcado que se utiliza
+    para crear la estructura de las páginas web. Permite organizar el contenido
+    mediante etiquetas como títulos, párrafos, imágenes y enlaces.
+</p>
+
+<h4>Etiquetas básicas de HTML</h4>
+<ul>
+    <li><strong>&lt;html&gt;</strong>: Define el inicio del documento.</li>
+    <li><strong>&lt;head&gt;</strong>: Contiene información del documento.</li>
+    <li><strong>&lt;title&gt;</strong>: Define el título de la página.</li>
+    <li><strong>&lt;body&gt;</strong>: Contiene el contenido visible.</li>
+    <li><strong>&lt;h1&gt; a &lt;h6&gt;</strong>: Títulos.</li>
+    <li><strong>&lt;p&gt;</strong>: Párrafos.</li>
+    <li><strong>&lt;img&gt;</strong>: Imágenes.</li>
+    <li><strong>&lt;a&gt;</strong>: Enlaces.</li>
+    <li><strong>&lt;table&gt;</strong>: Tablas.</li>
+    <li><strong>&lt;tr&gt;</strong>: Filas de una tabla.</li>
+    <li><strong>&lt;td&gt;</strong>: Celdas de una tabla.</li>
+</ul>
+
+<h3>¿Qué es CSS y para qué se utiliza?</h3>
+<p>
+    CSS (Cascading Style Sheets) es un lenguaje de estilos que se utiliza para
+    dar presentación a los documentos escritos en HTML o XML. Permite cambiar
+    colores, tamaños, fuentes, márgenes y posiciones de los elementos.
+</p>
+
+<h3>Estructura básica de CSS</h3>
+<p>
+    Una regla CSS se compone de un selector y un bloque de declaraciones,
+    donde se definen las propiedades y valores que se aplican a un elemento.
+</p>
+
+<h3>¿Qué es un selector en CSS?</h3>
+<p>
+    Un selector en CSS es la forma de indicar a qué elemento HTML se le
+    aplicarán los estilos. Existen diferentes tipos de selectores.
+</p>
+
+<h4>Selector de etiqueta</h4>
+<p>
+    Se utiliza para aplicar estilos a todas las etiquetas del mismo tipo.
+    Ejemplo: p, h1, div.
+</p>
+
+<h4>Selector de clase</h4>
+<p>
+    Se utiliza para aplicar estilos a uno o más elementos HTML que tienen el
+    mismo atributo class. Se representa con un punto (.).
+</p>
+<p>
+    Ejemplo: <strong>.titulo</strong>
+</p>
+
+<h4>Selector de ID</h4>
+<p>
+    Se utiliza para aplicar estilos a un solo elemento HTML que tiene un
+    identificador único. Se representa con el símbolo #.
+</p>
+<p>
+    Ejemplo: <strong>#contenedor</strong>
+</p>
+
+<h3>¿Qué es una hoja de estilo?</h3>
+<p>
+    Una hoja de estilo es un conjunto de reglas CSS que se utilizan para definir
+    la apariencia visual de una página web. Puede estar dentro del archivo HTML
+    o en un archivo externo.
+</p>
+
+<h3>Ventajas de usar CSS</h3>
+<ul>
+    <li>Mejora la apariencia de la página.</li>
+    <li>Permite separar contenido y diseño.</li>
+    <li>Facilita el mantenimiento del sitio web.</li>
+    <li>Hace que las páginas sean más atractivas.</li>
+    <li>Permite reutilizar estilos.</li>
+</ul>
+
+<h3>Componentes principales de una computadora</h3>
+<p>
+    Una computadora está formada por dos partes fundamentales: el
+    <strong>hardware</strong> y el <strong>software</strong>, que trabajan juntos
+    para permitir el funcionamiento del equipo.
+</p>
+
+<h3>Hardware</h3>
+<p>
+    El hardware se refiere a todos los componentes físicos y tangibles de una
+    computadora, es decir, las partes que se pueden tocar y ver.
+</p>
+
+<ul>
+    <li><strong>CPU:</strong> Es el cerebro de la computadora, procesa la información.</li>
+    <li><strong>Placa base:</strong> Conecta todos los componentes del sistema.</li>
+    <li><strong>Memoria RAM:</strong> Almacena datos temporales mientras se ejecutan programas.</li>
+    <li><strong>Disco duro o SSD:</strong> Guarda información de forma permanente.</li>
+    <li><strong>Fuente de poder:</strong> Proporciona energía a todos los componentes.</li>
+    <li><strong>Gabinete:</strong> Protege y contiene los componentes internos.</li>
+    <li><strong>Monitor:</strong> Muestra la información en pantalla.</li>
+    <li><strong>Teclado y mouse:</strong> Permiten la interacción del usuario.</li>
+</ul>
+
+<h3>CPU (Unidad Central de Procesamiento)</h3>
+<p>
+    La CPU es el componente encargado de ejecutar instrucciones y realizar
+    cálculos. Existen diferentes marcas y modelos.
+</p>
+
+<ul>
+    <li><strong>Intel:</strong> Procesadores como Core i3, i5, i7 y i9.</li>
+    <li><strong>AMD:</strong> Procesadores como Ryzen 3, Ryzen 5 y Ryzen 7.</li>
+</ul>
+
+<h3>Software</h3>
+<p>
+    El software es el conjunto de programas y aplicaciones que permiten
+    que la computadora funcione y realice tareas específicas.
+</p>
+
+<ul>
+    <li><strong>Sistema operativo:</strong> Windows, Linux, macOS.</li>
+    <li><strong>Programas:</strong> Word, Excel, navegadores web.</li>
+    <li><strong>Aplicaciones:</strong> Apps de comunicación, diseño o estudio.</li>
+</ul>
+
+<h3>Diferencia entre programa y software</h3>
+<p>
+    Un <strong>programa</strong> es una aplicación específica que realiza una tarea,
+    mientras que el <strong>software</strong> es el conjunto de programas que
+    permiten el funcionamiento general del sistema.
+</p>
+
+<h3>Conceptos de seguridad digital</h3>
+
+<ul>
+    <li><strong>Phishing:</strong> Técnica para engañar a las personas y robar información personal.</li>
+    <li><strong>Spam:</strong> Mensajes no deseados enviados de forma masiva.</li>
+    <li><strong>Scam:</strong> Fraude que busca engañar para obtener dinero o datos.</li>
+    <li><strong>Malware:</strong> Software malicioso diseñado para dañar dispositivos.</li>
+    <li><strong>Ransomware:</strong> Bloquea el sistema y pide rescate.</li>
+    <li><strong>Catfishing:</strong> Crear identidades falsas en internet.</li>
+    <li><strong>Grooming:</strong> Acoso de adultos hacia menores en línea.</li>
+</ul>
+
+<h3>Importancia de la cultura digital</h3>
+<p>
+    Conocer estos conceptos ayuda a usar la tecnología de forma segura,
+    responsable y consciente, evitando riesgos y protegiendo la información
+    personal.
+</p>
+</div>
+
+
+    <a id="parcial3"></a>
+    <div>
+        <h2>Tercer Parcial</h2>
+
+      <h3>Medios de información</h3>
+<p>
+    Los medios de información son herramientas que se utilizan para
+    comunicar, informar y transmitir conocimientos a las personas.
+    Su función principal es mantener informada a la sociedad sobre
+    hechos relevantes a nivel local, nacional e internacional.
+</p>
+
+<p>
+    Los medios de información deben ser claros, veraces y accesibles,
+    respetando el derecho de todas las personas a estar informadas.
+</p>
+
+<h3>Tipos de medios de información</h3>
+<ul>
+    <li>Televisión</li>
+    <li>Radio</li>
+    <li>Periódicos</li>
+    <li>Revistas</li>
+    <li>Internet</li>
+    <li>Redes sociales</li>
+</ul>
+
+<h3>Elementos de los medios informativos</h3>
+<ul>
+    <li>Ciudad o país</li>
+    <li>Autor</li>
+    <li>Fuente de información</li>
+    <li>Fecha de publicación</li>
+    <li>Dirección electrónica</li>
+    <li>Nombres de lectores</li>
+    <li>Correo electrónico</li>
+    <li>Especialización del medio</li>
+    <li>Otros datos relevantes</li>
+</ul>
+
+<h3>Importancia de los medios de comunicación</h3>
+<p>
+    Los medios de comunicación influyen en la sociedad y en la forma
+    de pensar de las personas, ya que permiten conocer sucesos
+    actuales y facilitan el acceso a la información.
+</p>
+
+<hr>
+
+<h3>Internet</h3>
+<p>
+    Internet es una red mundial que conecta millones de computadoras
+    y dispositivos, permitiendo el intercambio de información de
+    manera rápida y global.
+</p>
+
+<h4>Usos del internet</h4>
+<ul>
+    <li>Buscar información</li>
+    <li>Comunicación</li>
+    <li>Educación</li>
+    <li>Entretenimiento</li>
+    <li>Trabajo</li>
+</ul>
+
+<hr>
+
+<h3>Protección en internet</h3>
+<p>
+    La protección en internet consiste en aplicar medidas de seguridad
+    para evitar riesgos como el robo de información, fraudes o acoso
+    digital.
+</p>
+
+<h4>Medidas de protección</h4>
+<ul>
+    <li>No compartir datos personales.</li>
+    <li>Usar contraseñas seguras.</li>
+    <li>No aceptar desconocidos en redes sociales.</li>
+    <li>Evitar enlaces sospechosos.</li>
+    <li>Usar antivirus.</li>
+</ul>
+
+<hr>
+
+<h3>Identidad digital</h3>
+<p>
+    La identidad digital es la imagen que una persona crea en internet
+    a través de sus publicaciones, comentarios, fotos y actividades
+    en redes sociales.
+</p>
+
+<p>
+    Es importante cuidar la identidad digital porque influye en la
+    reputación personal y profesional.
+</p>
+
+<h4>Recomendaciones</h4>
+<ul>
+    <li>Publicar contenido responsable.</li>
+    <li>Respetar a los demás.</li>
+    <li>Configurar la privacidad.</li>
+    <li>Pensar antes de publicar.</li>
+</ul>
+
+<hr>
+
+<h3>La nube</h3>
+<p>
+    La nube es un servicio que permite almacenar información en
+    internet en lugar de hacerlo en la computadora.
+</p>
+
+<h4>Ejemplos de servicios en la nube</h4>
+<ul>
+    <li>Google Drive</li>
+    <li>OneDrive</li>
+    <li>Dropbox</li>
+</ul>
+
+<h4>Ventajas de la nube</h4>
+<ul>
+    <li>Acceso desde cualquier dispositivo.</li>
+    <li>Respaldo de información.</li>
+    <li>Ahorro de espacio.</li>
+    <li>Compartir archivos fácilmente.</li>
+</ul>
+    </div>
+
+    <div>
+        <h2>Tik Tok de apoyo</h2>
+        <video src="CULTURA DIGITAL (1).mp4" controls>
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+
+<form id="quizForm">
+    <h2>Cuestionario Final de Cultura Digital</h2>
+    <ol>
+
+        <li>
+            ¿Qué es la cultura digital?<br>
+            <label><input type="radio" name="p1" value="A"> Uso responsable de la tecnología</label><br>
+            <label><input type="radio" name="p1" value="B"> Solo usar redes sociales</label><br>
+            <label><input type="radio" name="p1" value="C"> Jugar videojuegos</label>
+        </li>
+        <li>
+            ¿Qué permite el internet?<br>
+            <label><input type="radio" name="p2" value="A"> Compartir información</label><br>
+            <label><input type="radio" name="p2" value="B"> Solo jugar</label><br>
+            <label><input type="radio" name="p2" value="C"> Apagar computadoras</label>
+        </li>
+        <li>
+            ¿Qué es la identidad digital?<br>
+            <label><input type="radio" name="p3" value="A"> Imagen que proyectamos en internet</label><br>
+            <label><input type="radio" name="p3" value="B"> Una contraseña</label><br>
+            <label><input type="radio" name="p3" value="C"> Un virus</label>
+        </li>
+        <li>
+            ¿Qué es el phishing?<br>
+            <label><input type="radio" name="p4" value="A"> Robo de información</label><br>
+            <label><input type="radio" name="p4" value="B"> Un juego</label><br>
+            <label><input type="radio" name="p4" value="C"> Un antivirus</label>
+        </li>
+        <li>
+            ¿Qué es malware?<br>
+            <label><input type="radio" name="p5" value="A"> Software malicioso</label><br>
+            <label><input type="radio" name="p5" value="B"> Programa educativo</label><br>
+            <label><input type="radio" name="p5" value="C"> Navegador</label>
+        </li>
+        <li>
+            ¿Qué medio de información es digital?<br>
+            <label><input type="radio" name="p6" value="A"> Internet</label><br>
+            <label><input type="radio" name="p6" value="B"> Radio</label><br>
+            <label><input type="radio" name="p6" value="C"> Carteles</label>
+        </li>
+        <li>
+            ¿Qué es la nube?<br>
+            <label><input type="radio" name="p7" value="A"> Almacenamiento en internet</label><br>
+            <label><input type="radio" name="p7" value="B"> Parte del clima</label><br>
+            <label><input type="radio" name="p7" value="C"> Un virus</label>
+        </li>
+        <li>
+            ¿Qué es HTML?<br>
+            <label><input type="radio" name="p8" value="A"> Lenguaje para crear páginas web</label><br>
+            <label><input type="radio" name="p8" value="B"> Un navegador</label><br>
+            <label><input type="radio" name="p8" value="C"> Antivirus</label>
+        </li>
+        <li>
+            ¿Para qué sirve CSS?<br>
+            <label><input type="radio" name="p9" value="A"> Dar estilo a páginas web</label><br>
+            <label><input type="radio" name="p9" value="B"> Crear virus</label><br>
+            <label><input type="radio" name="p9" value="C"> Buscar información</label>
+        </li>
+        <li>
+            ¿Qué es hardware?<br>
+            <label><input type="radio" name="p10" value="A"> Componentes físicos</label><br>
+            <label><input type="radio" name="p10" value="B"> Programas</label><br>
+            <label><input type="radio" name="p10" value="C"> Internet</label>
+        </li>
+        <li>¿Qué es software?<br>
+            <label><input type="radio" name="p11" value="A"> Programas de la computadora</label><br>
+            <label><input type="radio" name="p11" value="B"> Partes físicas</label>
+            <label><input type="radio" name="p11" value="C"> Cables de la computadora</label>
+            <label><input type="radio" name="p11" value="D"> Tactil de la computadora</label>
+        </li>
+        <li>¿Qué es spam?<br>
+            <label><input type="radio" name="p12" value="A"> Mensajes no deseados</label><br>
+            <label><input type="radio" name="p12" value="B"> Correos importantes</label>
+            <label><input type="radio" name="p12" value="B"> Información vital</label>
+            <label><input type="radio" name="p12" value="B"> Programas</label>
+        </li>
+        <li>¿Qué es grooming?<br>
+            <label><input type="radio" name="p13" value="A"> Acoso a menores</label><br>
+            <label><input type="radio" name="p13" value="B"> Juego</label>
+            <label><input type="radio" name="p13" value="C"> Hablar mal</label>
+            <label><input type="radio" name="p13" value="D"> Robo de datos</label>
+        </li>
+        <li>¿Qué es ransomware?<br>
+            <label><input type="radio" name="p14" value="A"> Bloquea información</label><br>
+            <label><input type="radio" name="p14" value="B"> Protege datos</label>
+            <label><input type="radio" name="p14" value="C"> Roba información</label>
+            <label><input type="radio" name="p14" value="D"> Programas de proteccion</label>
+        </li>
+        <li>¿Qué permite Google Drive?<br>
+            <label><input type="radio" name="p15" value="A"> Guardar archivos</label><br>
+            <label><input type="radio" name="p15" value="B"> Crear virus</label>
+            <label><input type="radio" name="p15" value="C"> Ver videos</label>
+            <label><input type="radio" name="p15" value="D"> Crear Videos</label>
+        </li>
+        <li>¿Qué es un selector CSS?<br>
+            <label><input type="radio" name="p16" value="A"> Aplica estilos</label><br>
+            <label><input type="radio" name="p16" value="B"> Borra datos</label>
+            <label><input type="radio" name="p16" value="B"> No se</label>
+            <label><input type="radio" name="p16" value="B"> Crea información</label>
+        </li>
+        <li>¿Qué es identidad digital responsable?<br>
+            <label><input type="radio" name="p17" value="A"> Cuidar lo que publicas</label><br>
+            <label><input type="radio" name="p17" value="B"> Publicar todo</label>
+            <label><input type="radio" name="p17" value="C"> No subir nada</label>
+            <label><input type="radio" name="p17" value="D"> Patrocinar marcas</label>
+        </li>
+        <li>¿Qué es una hoja de estilo?<br>
+            <label><input type="radio" name="p18" value="A"> Conjunto de reglas CSS</label><br>
+            <label><input type="radio" name="p18" value="B"> Documento Word</label>
+            <label><input type="radio" name="p18" value="B"> Una hoja de powerpoint</label>
+            <label><input type="radio" name="p18" value="D"> Una hoja de excel</label>
+        </li>
+        <li>¿Qué es catfishing?<br>
+            <label><input type="radio" name="p19" value="A"> Identidad falsa</label><br>
+            <label><input type="radio" name="p19" value="B"> Antivirus</label>
+            <label><input type="radio" name="p19" value="c"> Robo de datos</label>
+            <label><input type="radio" name="p19" value="D"> Medida de seguridad</label>
+        </li>
+        <li>¿Por qué es importante la cultura digital?<br>
+            <label><input type="radio" name="p20" value="A"> Uso seguro de tecnología</label><br>
+            <label><input type="radio" name="p20" value="B"> Solo entretenimiento</label>
+            <label><input type="radio" name="p20" value="c"> Para nada</label>
+            <label><input type="radio" name="p20" value="D"> Para cuidados fisicos</label>
+        </li>
+    </ol>
+    <br>
+    <button type="submit">Enviar respuestas</button>
+</form>
+<p id="resultado"></p>
+
+<script>
+const correctAnswers = {
+    p1:"A", p2:"A", p3:"A", p4:"A", p5:"A",
+    p6:"A", p7:"A", p8:"A", p9:"A", p10:"A",
+    p11:"A", p12:"A", p13:"A", p14:"A", p15:"A",
+    p16:"A", p17:"A", p18:"A", p19:"A", p20:"A"
+};
+
+document.getElementById("quizForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    let score = 0;
+
+    for(let q in correctAnswers){
+        const ans = document.querySelector(`input[name="${q}"]:checked`);
+        if(ans && ans.value === correctAnswers[q]) score++;
+    }
+
+    document.getElementById("resultado").innerText =
+        "Tu calificación es: " + score + " / 20";
+});
+</script>
+</main>
+</body>
+</html>

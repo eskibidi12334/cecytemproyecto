@@ -1,0 +1,555 @@
+<html>
+<head>
+    <title>Diseño de Software para Sistemas Informáticos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        video{
+            width: 100%;
+        }
+        /* ----------- ESTILO GENERAL ----------- */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f172a; /* azul oscuro moderno */
+            color: #e2e8f0;
+        }
+
+        header {
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+            border-bottom: 2px solid #38bdf8;
+        }
+
+        nav {
+            background: #0f172a;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 18px;
+            padding: 8px 12px;
+            transition: 0.3s;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            background: #1e293b;
+            color: #38bdf8;
+        }
+
+        main {
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #38bdf8;
+            border-left: 4px solid #38bdf8;
+            padding-left: 10px;
+        }
+
+        /* ----- TARJETAS ----- */
+        .informacion, .cuestionario, main > div {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 14px;
+            margin-top: 25px;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .informacion:hover, .cuestionario:hover, main > div:hover {
+            transform: scale(1.01);
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        /* ----- BOTONES Y LINKS ----- */
+        .pdf-link, a[href$=".pdf"] {
+            display: inline-block;
+            margin-top: 14px;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .pdf-link:hover, a[href$=".pdf"]:hover {
+            background: #0ea5e9;
+        }
+
+        button {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #0a597e;
+        }
+
+        footer {
+            background: #1e293b;
+            color: #e2e8f0;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 2px solid #38bdf8;
+        }
+
+
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            input[type="text"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1>Diseño de Software para Sistemas Informáticos</h1>
+    <h2>Selecciona el parcial</h2>
+    <nav>
+        <a href="index.html">Página principal</a>
+        <a href="#formulario">Formulario</a>
+        <a href="#informacion">Información</a>
+        <a href="materialesDisenoSoftware.pdf.pdf">PDF del curso</a>
+        <a href="#parcial1">1° Parcial</a> |
+        <a href="#parcial2">2° Parcial</a> |
+        <a href="#parcial3">3° Parcial</a>
+    </nav>
+</header>
+<main>
+    <div>
+   <a id="formulario"></a>
+    <div id="formulario">
+    <h2>Formulario de Opinión</h2>
+
+    <form id="formOpinion">
+        <label>
+            Nombre del alumno:
+            <br>
+            <input type="text" id="nombre" required>
+        </label>
+        <br><br>
+
+        <label>
+            Grupo:
+            <br>
+            <input type="text" id="grupo" required>
+        </label>
+        <br><br>
+
+        <label>
+            ¿Qué aprendiste en software?
+            <br>
+            <textarea id="opinion" rows="4" required></textarea>
+        </label>
+        <br><br>
+
+        <button type="submit">Enviar formulario</button>
+    </form>
+
+    <p id="mensajeForm"></p>
+
+<script>
+document.getElementById("formOpinion").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+
+    document.getElementById("mensajeForm").innerText =
+        "Gracias " + nombre + ", tu formulario fue enviado correctamente.";
+});
+</script>
+</div>
+
+    <a id="informacion"></a>
+    <h2>Información de la Materia</h2>
+    <p>
+        La materia de Diseño de Software para Sistemas Informáticos tiene como
+        objetivo que el estudiante comprenda cómo se planifican, diseñan y
+        estructuran los sistemas antes de ser programados.
+    </p>
+    <div>
+        <a class="pdf-link" href="materialesDisenoSoftware.pdf.pdf">
+            Descargar PDF de diseño de software
+        </a>
+    </div>
+    <a id="parcial1"></a>
+    <h2>Primer Parcial</h2>
+    <h3>Módulos de un sistema informático</h3>
+<ul>
+    <li><strong>Usuarios:</strong> Son personas que se conectan al sistema para hacer uso de los servicios que este les proporciona.</li>
+    <li><strong>Productos:</strong> Registra y gestiona los productos a la venta con detalles como precio, código y categoría.</li>
+    <li><strong>Proveedores:</strong> Maneja la información de los proveedores que surten los productos.</li>
+    <li><strong>Inventario:</strong> Controla las existencias, entradas y salidas de productos.</li>
+    <li><strong>POS (Punto de Venta):</strong> Procesa las ventas, calcula totales, genera tickets y acepta pagos.</li>
+    <li><strong>Reportes:</strong> Genera informes sobre ventas, inventario y actividad del sistema.</li>
+    <li><strong>Tipos de usuario:</strong> Define roles y permisos dentro del sistema, como administrador y vendedor.</li>
+</ul>
+
+<h3>Diseño rápido del sistema</h3>
+
+<ul>
+    <li><strong>Primera pantalla:</strong> Login (usuario y contraseña).</li>
+    <li><strong>Segunda pantalla:</strong> Menú principal con opciones como productos, inventario, reportes y POS.</li>
+    <li><strong>Tercera etapa:</strong> Construcción del prototipo (versión funcional del sistema).</li>
+</ul>
+<h3>Pantalla de Login</h3>
+<p>
+    Una pantalla de login es una interfaz que se utiliza para controlar el acceso
+    a un sistema, aplicación o sitio web.
+</p>
+<h4>Sirve para:</h4>
+<ul>
+    <li>Autenticar las entradas del usuario.</li>
+    <li>Controlar el acceso al sistema.</li>
+    <li>Proteger la seguridad y privacidad.</li>
+    <li>Asignar permisos y roles.</li>
+    <li>Registrar la actividad del usuario.</li>
+    <li>Proporcionar una experiencia personalizada.</li>
+    <li>Cumplir con regulaciones de seguridad y privacidad.</li>
+</ul>
+<h4>Componentes del login</h4>
+<ul>
+    <li>Campo para ingresar el nombre de usuario.</li>
+    <li>Campo para ingresar la contraseña.</li>
+    <li>Botón para iniciar sesión.</li>
+    <li>Enlace para recuperar la contraseña olvidada.</li>
+    <li>Enlace para crear una nueva cuenta (si corresponde).</li>
+</ul>
+    <video src="Diseña Software.mp4" controls width="100%">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+</div>
+
+ <a id="parcial2"></a>
+ <div>
+ <h2>Segundo Parcial</h2>
+ <h3>Etapas del proceso</h3>
+<p>
+    La metodología de desarrollo de software es un marco de trabajo utilizado para
+    estandarizar, optimizar y controlar el proceso de desarrollo de software,
+    asegurando productos de alta calidad.
+</p>
+<ul>
+    <li>Proporciona un enfoque estructurado y sistemático.</li>
+    <li>Permite diseñar, desarrollar, probar y mantener software.</li>
+    <li>Ayuda a que el proceso de desarrollo sea eficiente y eficaz.</li>
+    <li>Cada metodología tiene ventajas y desventajas.</li>
+    <li>La elección depende del proyecto, del equipo de desarrollo y de las necesidades del cliente.</li>
+</ul>
+<h3>Metodología de prototipos</h3>
+<p>
+    La metodología de prototipos se basa en la creación de prototipos funcionales
+    para facilitar la comunicación con los usuarios y permitir evaluar y mejorar
+    el sistema antes de su desarrollo final.
+</p>
+<ul>
+    <li>Se centra en la interacción del usuario con el sistema.</li>
+    <li>Permite identificar errores y mejoras desde etapas tempranas.</li>
+    <li>Ayuda a validar ideas y requisitos del proyecto.</li>
+    <li>Favorece la retroalimentación constante de los usuarios.</li>
+</ul>
+<h3>Objetivo de la metodología de prototipos</h3>
+<p>
+    El objetivo principal es crear un modelo tangible y funcional del sistema
+    o producto, para que los usuarios y stakeholders puedan interactuar con él
+    y proporcionar retroalimentación.
+</p>
+<h3>Etapas del proceso de prototipado</h3>
+<ul>
+    <li><strong>Definición del problema:</strong> Identificación del problema o necesidad que se desea resolver.</li>
+    <li><strong>Creación del prototipo:</strong> Desarrollo de un prototipo inicial del sistema o producto.</li>
+    <li><strong>Evaluación del prototipo:</strong> Presentación del prototipo a los usuarios y stakeholders para recopilar retroalimentación.</li>
+    <li><strong>Refinamiento del prototipo:</strong> Realización de cambios y ajustes al prototipo con base en la retroalimentación recibida.</li>
+    <li><strong>Iteración:</strong> Repetición de las etapas de evaluación y refinamiento hasta que el prototipo cumpla con los requisitos y expectativas.</li>
+</ul>
+</div>
+
+<a id="parcial3">
+ <div>
+    <h2>Tercer Parcial</h2>
+<h3>Pseudocódigo</h3>
+<p>
+    El pseudocódigo es una forma de representar algoritmos utilizando un lenguaje
+    intermedio entre el lenguaje natural y el lenguaje de programación, lo que
+    facilita la comprensión de la lógica de un programa.
+</p>
+<ul>
+    <li>No depende de un lenguaje de programación específico.</li>
+    <li>Permite planear la solución antes de programar.</li>
+    <li>Facilita el análisis de problemas.</li>
+    <li>Ayuda a detectar errores lógicos.</li>
+    <li>Es fácil de leer y entender.</li>
+</ul>
+<h3>Objetivo del pseudocódigo</h3>
+<p>
+    El objetivo del pseudocódigo es describir de forma clara y ordenada los pasos
+    necesarios para resolver un problema, sin preocuparse por la sintaxis de un
+    lenguaje de programación.
+</p>
+<h3>Estructuras básicas del pseudocódigo</h3>
+<ul>
+    <li><strong>Entrada:</strong> Permite recibir datos del usuario.</li>
+    <li><strong>Proceso:</strong> Conjunto de instrucciones que transforman los datos.</li>
+    <li><strong>Salida:</strong> Muestra los resultados obtenidos.</li>
+</ul>
+<h3>Estructuras de control</h3>
+<ul>
+    <li><strong>Estructura secuencial:</strong> Las instrucciones se ejecutan una tras otra.</li>
+    <li><strong>Estructura condicional:</strong> Permite tomar decisiones usando condiciones
+        (Si...Entonces...Sino).</li>
+    <li><strong>Estructura repetitiva:</strong> Permite repetir instrucciones mientras se
+        cumpla una condición (Mientras, Repetir, Para).</li>
+</ul>
+<h3>Ejemplo de pseudocódigo</h3>
+<p>
+    El siguiente ejemplo muestra un pseudocódigo sencillo que solicita un número
+    al usuario y determina si es positivo o negativo.
+</p>
+<ul>
+    <li>Inicio</li>
+    <li>Leer número</li>
+    <li>Si número &gt;= 0 Entonces</li>
+    <li>  Mostrar "El número es positivo"</li>
+    <li>Sino</li>
+    <li>  Mostrar "El número es negativo"</li>
+    <li>FinSi</li>
+    <li>Fin</li>
+</ul>
+</a>
+</div>
+
+
+</header>
+<main>
+ <div>
+    <h2>Cuestionario de Evaluación</h2>
+    <form id="quizForm">
+        <ol>
+            <li>
+                ¿Qué módulo registra y gestiona los productos a la venta?<br>
+                <label><input type="radio" name="p1" value="A"> A) Productos</label><br>
+                <label><input type="radio" name="p1" value="B"> B) Inventario</label><br>
+                <label><input type="radio" name="p1" value="C"> C) Reportes</label><br>
+                <label><input type="radio" name="p1" value="D"> D) Usuarios</label>
+            </li>
+
+            <li>
+                ¿Cuál módulo controla entradas y salidas de productos?<br>
+                <label><input type="radio" name="p2" value="A"> A) Inventario</label><br>
+                <label><input type="radio" name="p2" value="B"> B) POS</label><br>
+                <label><input type="radio" name="p2" value="C"> C) Proveedores</label><br>
+                <label><input type="radio" name="p2" value="D"> D) Usuarios</label>
+            </li>
+
+            <li>
+                ¿Qué módulo procesa ventas, calcula totales y genera tickets?<br>
+                <label><input type="radio" name="p3" value="A"> A) POS</label><br>
+                <label><input type="radio" name="p3" value="B"> B) Reportes</label><br>
+                <label><input type="radio" name="p3" value="C"> C) Inventario</label><br>
+                <label><input type="radio" name="p3" value="D"> D) Productos</label>
+            </li>
+
+            <li>
+                ¿Qué módulo maneja información de quienes surten productos?<br>
+                <label><input type="radio" name="p4" value="A"> A) Proveedores</label><br>
+                <label><input type="radio" name="p4" value="B"> B) Usuarios</label><br>
+                <label><input type="radio" name="p4" value="C"> C) Productos</label><br>
+                <label><input type="radio" name="p4" value="D"> D) POS</label>
+            </li>
+
+            <li>
+                ¿Qué módulo genera informes de ventas, inventario y actividad?<br>
+                <label><input type="radio" name="p5" value="A"> A) Reportes</label><br>
+                <label><input type="radio" name="p5" value="B"> B) POS</label><br>
+                <label><input type="radio" name="p5" value="C"> C) Usuarios</label><br>
+                <label><input type="radio" name="p5" value="D"> D) Proveedores</label>
+            </li>
+
+            <li>
+                ¿Por qué es importante tener diferentes tipos de usuarios?<br>
+                <label><input type="radio" name="p6" value="A"> A) Para controlar acceso y funciones según roles</label><br>
+                <label><input type="radio" name="p6" value="B"> B) Para hacer el sistema más complicado</label><br>
+                <label><input type="radio" name="p6" value="C"> C) Para evitar documentar el sistema</label><br>
+                <label><input type="radio" name="p6" value="D"> D) Para permitir que todos hagan todo</label>
+            </li>
+
+            <li>
+                ¿Cómo mejora la seguridad tener permisos asignados?<br>
+                <label><input type="radio" name="p7" value="A"> A) Solo usuarios autorizados realizan acciones permitidas</label><br>
+                <label><input type="radio" name="p7" value="B"> B) Cualquier usuario puede modificar el sistema</label><br>
+                <label><input type="radio" name="p7" value="C"> C) Permite eliminar información sin control</label><br>
+                <label><input type="radio" name="p7" value="D"> D) No influye en seguridad</label>
+            </li>
+
+            <li>
+                ¿Qué rol tiene acceso total al sistema?<br>
+                <label><input type="radio" name="p8" value="A"> A) Administrador</label><br>
+                <label><input type="radio" name="p8" value="B"> B) Usuario avanzado</label><br>
+                <label><input type="radio" name="p8" value="C"> C) Usuario estándar</label><br>
+                <label><input type="radio" name="p8" value="D"> D) Usuario de solo lectura</label>
+            </li>
+
+            <li>
+                ¿Cuál usuario tiene acceso a funciones básicas del sistema?<br>
+                <label><input type="radio" name="p9" value="A"> A) Usuario estándar</label><br>
+                <label><input type="radio" name="p9" value="B"> B) Administrador</label><br>
+                <label><input type="radio" name="p9" value="C"> C) Usuario avanzado</label><br>
+                <label><input type="radio" name="p9" value="D"> D) Usuario restringido</label>
+            </li>
+
+            <li>
+                ¿Cuál usuario solo puede ver información sin hacer cambios?<br>
+                <label><input type="radio" name="p10" value="A"> A) Usuario de solo lectura</label><br>
+                <label><input type="radio" name="p10" value="B"> B) Administrador</label><br>
+                <label><input type="radio" name="p10" value="C"> C) Usuario avanzado</label><br>
+                <label><input type="radio" name="p10" value="D"> D) Usuario estándar</label>
+            </li>
+
+            <li>
+                ¿Qué tipo de usuario solo realiza acciones específicas?<br>
+                <label><input type="radio" name="p11" value="A"> A) Usuario restringido</label><br>
+                <label><input type="radio" name="p11" value="B"> B) Administrador</label><br>
+                <label><input type="radio" name="p11" value="C"> C) Usuario avanzado</label><br>
+                <label><input type="radio" name="p11" value="D"> D) Usuario estándar</label>
+            </li>
+
+            <li>
+                ¿Qué es la metodología de desarrollo de software?<br>
+                <label><input type="radio" name="p12" value="A"> A) Proceso estructurado para diseñar, desarrollar y mantener software</label><br>
+                <label><input type="radio" name="p12" value="B"> B) Un manual de usuario</label><br>
+                <label><input type="radio" name="p12" value="C"> C) Solo la etapa de pruebas</label><br>
+                <label><input type="radio" name="p12" value="D"> D) Un prototipo</label>
+            </li>
+
+            <li>
+                ¿Qué es un prototipo según tus apuntes?<br>
+                <label><input type="radio" name="p13" value="A"> A) Modelo inicial del sistema para pruebas y retroalimentación</label><br>
+                <label><input type="radio" name="p13" value="B"> B) Producto final del sistema</label><br>
+                <label><input type="radio" name="p13" value="C"> C) Documento de requerimientos</label><br>
+                <label><input type="radio" name="p13" value="D"> D) Diagrama UML</label>
+            </li>
+
+            <li>
+                ¿Cuál es el objetivo del prototipado?<br>
+                <label><input type="radio" name="p14" value="A"> A) Identificar requisitos y mejorar el diseño antes del producto final</label><br>
+                <label><input type="radio" name="p14" value="B"> B) Desarrollar directamente la versión final</label><br>
+                <label><input type="radio" name="p14" value="C"> C) Evitar retroalimentación</label><br>
+                <label><input type="radio" name="p14" value="D"> D) Eliminar etapas del proyecto</label>
+            </li>
+
+            <li>
+                ¿Cuál es la primera etapa del prototipado?<br>
+                <label><input type="radio" name="p15" value="A"> A) Definición del problema</label><br>
+                <label><input type="radio" name="p15" value="B"> B) Evaluación del prototipo</label><br>
+                <label><input type="radio" name="p15" value="C"> C) Refinamiento</label><br>
+                <label><input type="radio" name="p15" value="D"> D) Producción</label>
+            </li>
+
+            <li>
+                ¿Qué se hace en la etapa de evaluación del prototipo?<br>
+                <label><input type="radio" name="p16" value="A"> A) Recolectar retroalimentación de los usuarios</label><br>
+                <label><input type="radio" name="p16" value="B"> B) Programar la versión final</label><br>
+                <label><input type="radio" name="p16" value="C"> C) Realizar el diseño visual</label><br>
+                <label><input type="radio" name="p16" value="D"> D) Crear reportes</label>
+            </li>
+
+            <li>
+                ¿Qué etapa implica hacer mejoras y ajustes al prototipo?<br>
+                <label><input type="radio" name="p17" value="A"> A) Refinamiento</label><br>
+                <label><input type="radio" name="p17" value="B"> B) Producción</label><br>
+                <label><input type="radio" name="p17" value="C"> C) Diseño</label><br>
+                <label><input type="radio" name="p17" value="D"> D) Pruebas finales</label>
+            </li>
+
+            <li>
+                ¿Qué se busca en la etapa de producción?<br>
+                <label><input type="radio" name="p18" value="A"> A) Crear el prototipo inicial</label><br>
+                <label><input type="radio" name="p18" value="B"> B) Dar el sistema como terminado</label><br>
+                <label><input type="radio" name="p18" value="C"> C) Detectar errores visuales</label><br>
+                <label><input type="radio" name="p18" value="D"> D) Crear pantallas</label>
+            </li>
+
+            <li>
+                ¿Por qué es necesaria la retroalimentación de los stakeholders?<br>
+                <label><input type="radio" name="p19" value="A"> A) Para mejorar el prototipo y cumplir expectativas</label><br>
+                <label><input type="radio" name="p19" value="B"> B) Para reiniciar el proyecto</label><br>
+                <label><input type="radio" name="p19" value="C"> C) Para eliminar funciones</label><br>
+                <label><input type="radio" name="p19" value="D"> D) Para terminar rápidamente</label>
+            </li>
+
+            <li>
+                ¿Cuál es la meta del prototipo final?<br>
+                <label><input type="radio" name="p20" value="A"> A) Cumplir los requisitos y expectativas del usuario</label><br>
+                <label><input type="radio" name="p20" value="B"> B) Ser el sistema final</label><br>
+                <label><input type="radio" name="p20" value="C"> C) No necesitar evaluación</label><br>
+                <label><input type="radio" name="p20" value="D"> D) Sustituir los requerimientos</label>
+            </li>
+        </ol>
+
+        <button type="submit">Enviar respuestas</button>
+    </form>
+
+    <h3 id="resultado"></h3>
+</div>
+
+<script>
+    const correctAnswers = {
+        p1:"A", p2:"A", p3:"A", p4:"A", p5:"A",
+        p6:"A", p7:"A", p8:"A", p9:"A", p10:"A",
+        p11:"A", p12:"A", p13:"A", p14:"A", p15:"A",
+        p16:"A", p17:"A", p18:"A", p19:"A", p20:"A"
+    };
+
+    document.getElementById("quizForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        for(let q in correctAnswers){
+            const ans = document.querySelector(`input[name="${q}"]:checked`);
+            if(ans && ans.value === correctAnswers[q]) score++;
+        }
+        document.getElementById("resultado").innerText = "Tu calificación es: " + score + "/20";
+    });
+</script>
+ <script>
+        document.getElementById("quizForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("¡Respuestas enviadas correctamente!");
+        });
+    </script>
+</main>    
+</body>
+</html>

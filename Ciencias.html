@@ -1,0 +1,842 @@
+<html>
+<head>
+    <title>Ciencias Sociales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            color: #f5f5f5;
+        }
+
+        header{
+            background: linear-gradient(135deg, #7f1d1d, #000000);
+            color: #fecaca;
+            padding: 28px;
+            text-align: center;
+            border-bottom: 4px solid #dc2626;
+        }
+
+        nav{
+            background: #111111;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #dc2626;
+        }
+
+        nav a{
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 14px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            background: #dc2626;
+            color: #ffffff;
+        }
+
+        main{
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2{
+            color: #dc2626;
+            border-left: 4px solid #dc2626;
+            padding-left: 10px;
+        }
+
+        h3{
+            color: #f87171;
+        }
+
+        main > div{
+            background: #111111;
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 25px;
+            border: 1px solid #dc2626;
+            box-shadow: 0 8px 20px rgb(63, 9, 9);
+        }
+
+        ul li{
+            margin-bottom: 8px;
+        }
+
+        .pdf-link{
+            display: inline-block;
+            margin-top: 14px;
+            background: #dc2626;
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .pdf-link:hover{
+            background: #7f1d1d;
+        }
+
+        video{
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 12px;
+            border: 2px solid #dc2626;
+        }
+
+        button{
+            background: #dc2626;
+            color: #ffffff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover{
+            background: #7f1d1d;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #dc2626;
+            margin-top: 4px;
+            background: #0f0f0f;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Ciencias Sociales</h1>
+    <h2>Segundo Semestre</h2>
+
+    <nav>
+        <a href="index.html">Página principal</a>
+        <a href="#informacion">Información</a>
+        <a href="#formulario">Formulario</a>
+        <a href="Ciencias.pdf">PDF del curso</a>
+        <a href="#parcial1">1° Parcial</a> |
+        <a href="#parcial2">2° Parcial</a> |
+        <a href="#parcial3">3° Parcial</a>
+    </nav>
+</header>
+
+<main>
+
+<a id="formulario"></a>
+<div>
+    <h2>Formulario de Opinión</h2>
+    <form id="formOpinion">
+        <label>
+            Nombre del alumno:
+            <input type="text" id="nombre" required>
+        </label>
+
+        <label>
+            Grupo:
+            <input type="text" id="grupo" required>
+        </label>
+
+        <label>
+            ¿Qué aprendiste en Ciencias Sociales?
+            <textarea id="opinion" rows="4" required></textarea>
+        </label>
+
+        <br>
+        <button type="submit">Enviar formulario</button>
+    </form>
+
+    <p id="mensajeForm"></p>
+</div>
+
+<script>
+document.getElementById("formOpinion").addEventListener("submit", function(e){
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    document.getElementById("mensajeForm").innerText =
+        "Gracias " + nombre + ", tu formulario fue enviado correctamente.";
+});
+</script>
+
+<a id="informacion"></a>
+<div>
+    <h2>Información de la Materia</h2>
+
+    <p>
+        La materia de Ciencias Sociales tiene como objetivo que los estudiantes
+        comprendan la organización de la sociedad, la historia, la geografía,
+        la economía y la cultura, así como la relación entre los seres humanos
+        y su entorno.
+    </p>
+
+    <p>
+        A través del análisis de hechos históricos, fenómenos sociales y
+        procesos económicos, se fomenta el pensamiento crítico, la reflexión
+        y la participación responsable en la sociedad.
+    </p>
+
+    <p>
+        Las Ciencias Sociales ayudan a entender los problemas actuales del
+        mundo, promover valores como la justicia, el respeto y la igualdad,
+        y formar ciudadanos conscientes.
+    </p>
+
+    <a class="pdf-link" href="Ciencias.pdf">Descargar PDF</a>
+
+    <p>
+        Más información
+        <a href="https://concepto.de/ciencias-sociales/">Ver más</a>
+    </p>
+</div>
+
+<a id="parcial1"></a>
+<div>
+    <h2>Primer Parcial</h2>
+    <h3>Nuevas autoridades y procesos democráticos</h3>
+    <p>
+        En un país democrático, el poder se organiza para evitar abusos y permitir
+        una mejor administración del Estado. Este poder se divide en tres:
+    </p>
+
+    <h4>Poder Ejecutivo</h4>
+    <p>
+        Se encarga de gobernar y administrar el país.
+    </p>
+    <ul>
+        <li>Aplica las leyes.</li>
+        <li>Dirige las políticas públicas.</li>
+        <li>Administra los recursos del país.</li>
+    </ul>
+    <p>
+        <strong>Ejemplo:</strong> El presidente y su gabinete
+        (Secretarías como Salud, Educación, Economía, etc.).
+    </p>
+
+    <h4>Poder Legislativo</h4>
+    <p>
+        Su función principal es crear, modificar y aprobar las leyes.
+    </p>
+    <ul>
+        <li>Representa a la ciudadanía.</li>
+        <li>Analiza y aprueba reformas legales.</li>
+    </ul>
+    <p>
+        <strong>En México:</strong> Está conformado por la Cámara de Diputados y
+        la Cámara de Senadores.
+    </p>
+
+    <h4>Poder Judicial</h4>
+    <p>
+        Se encarga de hacer cumplir las leyes y aplicar justicia.
+    </p>
+    <ul>
+        <li>Interpreta las leyes.</li>
+        <li>Resuelve conflictos legales.</li>
+        <li>Protege los derechos de las personas.</li>
+    </ul>
+    <p>
+        <strong>Incluye:</strong> Jueces, tribunales y la Suprema Corte de Justicia.
+    </p>
+
+    <hr>
+
+    <h3>Proceso de democratización</h3>
+    <p>
+        El proceso de democratización es el camino que sigue un país para
+        construir un sistema político más justo, participativo e incluyente.
+    </p>
+
+    <h4>¿Qué es la democracia?</h4>
+    <p>
+        La democracia es un sistema de gobierno en el que el poder lo tiene el
+        pueblo, quien elige a sus gobernantes mediante elecciones.
+    </p>
+
+    <h4>¿Para qué sirve la democracia?</h4>
+    <ul>
+        <li>Permite la participación ciudadana.</li>
+        <li>Garantiza elecciones libres y justas.</li>
+        <li>Promueve el respeto a los derechos humanos.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Revolución Industrial, derechos humanos y transformación social</h3>
+
+    <h4>Revolución Industrial</h4>
+    <p>
+        La Revolución Industrial ocurrió entre los años 1760 y 1840 y provocó
+        grandes cambios económicos y sociales.
+    </p>
+    <ul>
+        <li>Uso de máquinas.</li>
+        <li>Crecimiento de fábricas.</li>
+        <li>Migración del campo a la ciudad.</li>
+    </ul>
+    <p>
+        Estos cambios transformaron la economía y la forma de vida de las personas.
+    </p>
+
+    <h4>Derechos humanos</h4>
+    <p>
+        Los derechos humanos son derechos que todas las personas tienen desde
+        que nacen, sin importar su país, cultura o condición social.
+    </p>
+    <ul>
+        <li>Derecho a la vida.</li>
+        <li>Derecho a la igualdad y no discriminación.</li>
+        <li>Derecho a la libertad.</li>
+        <li>Derechos económicos (trabajo y salario justo).</li>
+    </ul>
+
+    <h4>Relación con las leyes</h4>
+    <p>
+        Los derechos humanos están protegidos por:
+    </p>
+    <ul>
+        <li>La Constitución.</li>
+        <li>Tratados internacionales.</li>
+    </ul>
+
+    <h4>Transformación social</h4>
+    <p>
+        La transformación social es el cambio en leyes, costumbres y estructuras
+        sociales para mejorar la vida de las personas.
+    </p>
+    <p>
+        <strong>Ejemplos:</strong>
+    </p>
+    <ul>
+        <li>Abolición de la esclavitud.</li>
+        <li>Derechos laborales.</li>
+        <li>Derechos de las mujeres.</li>
+    </ul>
+
+    <h4>Relación con las leyes</h4>
+    <p>
+        Las leyes ayudan a:
+    </p>
+    <ul>
+        <li>Regular la convivencia social.</li>
+        <li>Proteger los derechos humanos.</li>
+        <li>Establecer obligaciones y sanciones.</li>
+    </ul>
+    <p>
+        <strong>Ejemplo:</strong> Las leyes laborales surgieron después de la
+        Revolución Industrial para proteger a los trabajadores.
+    </p>
+</div>
+
+<a id="parcial2"></a>
+<div>
+    <h2>Segundo Parcial</h2>
+   <h3>¿Qué es la economía?</h3>
+    <p>
+        La economía es la ciencia que estudia cómo las personas utilizan los
+        recursos disponibles para satisfacer sus necesidades.
+    </p>
+
+    <hr>
+
+    <h3>Etapas de la economía</h3>
+    <p>
+        Las etapas de la economía son los pasos que sigue un producto desde
+        que se crea hasta que es utilizado por las personas.
+    </p>
+
+    <ul>
+        <li><strong>Producción:</strong> Crear bienes o servicios.</li>
+        <li><strong>Distribución:</strong> Llevar los productos al mercado.</li>
+        <li><strong>Comercialización:</strong> Vender los productos.</li>
+        <li><strong>Consumo:</strong> Uso final por las personas.</li>
+    </ul>
+
+    <h4>Relación con las leyes laborales</h4>
+    <p>
+        En todas estas etapas participan trabajadores, por lo que existen leyes
+        que protegen sus derechos laborales.
+    </p>
+
+    <hr>
+
+    <h3>Tipos de economía</h3>
+
+    <ul>
+        <li>
+            <strong>Economía socialista:</strong> El Estado controla los medios
+            de producción.
+        </li>
+        <li>
+            <strong>Libre comercio:</strong> Intercambio de bienes y servicios
+            entre países con pocas restricciones.
+        </li>
+        <li>
+            <strong>Economía mixta:</strong> Participan el Estado y los
+            particulares.
+        </li>
+    </ul>
+
+    <p>
+        <strong>México</strong> tiene una economía mixta, reconocida en la
+        Constitución.
+    </p>
+
+    <hr>
+
+    <h3>Sectores económicos</h3>
+
+    <h4>Sector primario</h4>
+    <p>
+        Se encarga de obtener recursos directamente de la naturaleza.
+    </p>
+    <ul>
+        <li>Agricultura</li>
+        <li>Ganadería</li>
+        <li>Pesca</li>
+        <li>Minería</li>
+    </ul>
+
+    <p>
+        <strong>Ley relacionada:</strong> La Ley Federal del Trabajo (LFT)
+        protege a jornaleros y trabajadores del campo.
+    </p>
+
+    <h4>Sector secundario</h4>
+    <p>
+        Transforma las materias primas en productos elaborados.
+    </p>
+    <ul>
+        <li>Manufactura</li>
+        <li>Construcción</li>
+        <li>Industria automotriz</li>
+        <li>Producción de energía</li>
+    </ul>
+
+    <p>
+        <strong>Artículo 123 Constitucional:</strong>
+    </p>
+    <ul>
+        <li>Jornada laboral.</li>
+        <li>Salario mínimo.</li>
+        <li>Seguridad e higiene.</li>
+    </ul>
+
+    <h4>Sector terciario</h4>
+    <p>
+        Ofrece servicios a la población.
+    </p>
+    <ul>
+        <li>Comercio</li>
+        <li>Turismo</li>
+        <li>Transporte</li>
+        <li>Educación</li>
+        <li>Salud</li>
+        <li>Administración pública</li>
+    </ul>
+
+    <p>
+        <strong>Ley Federal del Trabajo:</strong> Aplica a maestros,
+        enfermeros, comerciantes y otros trabajadores del sector servicios.
+    </p>
+
+    <h4>Sector cuaternario</h4>
+    <p>
+        Se enfoca en el conocimiento y la innovación.
+    </p>
+    <ul>
+        <li>Investigación científica</li>
+        <li>Tecnología</li>
+        <li>Medios de comunicación (radio, televisión y prensa)</li>
+    </ul>
+    <hr>
+
+    <h3>G20, Davos y economía global</h3>
+
+    <h4>¿Qué es el G20?</h4>
+    <p>
+        El G20 es un grupo conformado por los 20 países con las economías más
+        grandes del mundo, incluido México.
+    </p>
+
+    <h4>¿Por qué se creó el G20?</h4>
+    <p>
+        Surgió después de crisis financieras con el objetivo de proteger las
+        economías, evitar el desempleo masivo y fortalecer los mercados laborales.
+    </p>
+    <hr>
+
+    <h3>Leyes de trabajo en México</h3>
+
+    <h4>Artículo 123 Constitucional</h4>
+    <ul>
+        <li>Derecho al trabajo digno.</li>
+        <li>Salario mínimo.</li>
+        <li>Jornada máxima de 8 horas.</li>
+        <li>Descanso semanal.</li>
+        <li>Seguridad social.</li>
+    </ul>
+
+    <h4>Ley Federal del Trabajo (LFT)</h4>
+    <p>
+        Protege a los trabajadores de todos los sectores económicos.
+    </p>
+    <ul>
+        <li>Contratos laborales.</li>
+        <li>Vacaciones.</li>
+        <li>Aguinaldo.</li>
+        <li>Horas extra.</li>
+        <li>Protección contra despidos injustificados.</li>
+    </ul>
+</div>
+
+<a id="parcial3"></a>
+<div>
+    <h2>Tercer Parcial</h2>
+    <h3>Tipos de gobierno</h3>
+    <h4>Democracia</h4>
+    <p>
+        La democracia es un tipo de gobierno donde el poder lo tiene el pueblo,
+        quien elige a sus gobernantes mediante elecciones.
+    </p>
+
+    <h5>Características</h5>
+    <ul>
+        <li>Elecciones libres.</li>
+        <li>Participación ciudadana.</li>
+        <li>Respeto a los derechos humanos.</li>
+    </ul>
+
+    <p>
+        <strong>México:</strong><br>
+        <strong>Artículo 40 de la Constitución.</strong><br>
+        México es una República democrática, laica y federal.
+    </p>
+
+    <hr>
+
+    <h4>Monarquía</h4>
+    <p>
+        En la monarquía el poder lo tiene un rey o una reina.
+    </p>
+
+    <h5>Tipos de monarquía</h5>
+    <ul>
+        <li>
+            <strong>Monarquía absoluta:</strong> El monarca concentra todo el
+            poder (ejemplo: Arabia Saudita).
+        </li>
+        <li>
+            <strong>Monarquía constitucional:</strong> El poder del monarca está
+            limitado por leyes (ejemplo: España).
+        </li>
+    </ul>
+
+    <p>
+        <strong>En México:</strong> No existe la monarquía.
+    </p>
+
+    <hr>
+
+    <h4>Dictadura</h4>
+    <p>
+        La dictadura es un tipo de gobierno donde el poder lo concentra una sola
+        persona o un grupo reducido.
+    </p>
+
+    <h5>Características</h5>
+    <ul>
+        <li>No existen elecciones reales.</li>
+        <li>No se respetan los derechos humanos.</li>
+        <li>Uso de la fuerza para mantener el poder.</li>
+    </ul>
+
+    <p>
+        <strong>En México:</strong> Está prohibida por la Constitución.
+    </p>
+
+    <hr>
+
+    <h4>República</h4>
+    <p>
+        En una república, el jefe de Estado es elegido por el pueblo por un
+        tiempo determinado.
+    </p>
+
+    <p>
+        <strong>México:</strong> Es una república, no una monarquía.
+    </p>
+
+    <hr>
+
+    <h4>Federalismo</h4>
+    <p>
+        El federalismo es una forma de organización donde el país se divide en
+        estados que tienen cierta autonomía.
+    </p>
+    <p>
+        <strong>México:</strong><br>
+        <strong>Artículos 40 y 124 de la Constitución.</strong><br>
+        México está formado por 32 entidades federativas.
+    </p>
+    <hr>
+    <h3>El capitalismo</h3>
+    <h4>¿Qué es el capitalismo?</h4>
+    <p>
+        El capitalismo es un sistema económico en el que los medios de producción
+        son privados y se busca obtener ganancias.
+    </p>
+
+    <h4>Características del capitalismo</h4>
+    <ul>
+        <li>Propiedad privada.</li>
+        <li>Competencia entre empresas.</li>
+        <li>Oferta y demanda.</li>
+        <li>Inversión de capital.</li>
+        <li>Trabajo asalariado.</li>
+    </ul>
+
+    <hr>
+
+    <h4>Capitalismo en México</h4>
+    <p>
+        México tiene un capitalismo regulado, también llamado economía mixta.
+    </p>
+
+    <h5>¿Por qué?</h5>
+    <ul>
+        <li>Las empresas son privadas.</li>
+        <li>El Estado regula la economía.</li>
+        <li>Existen leyes laborales.</li>
+        <li>Hay salario mínimo e impuestos.</li>
+    </ul>
+
+    <p>
+        <strong>Artículo 25 Constitucional:</strong><br>
+        El Estado dirige el desarrollo nacional para garantizar el bienestar
+        de la población.
+    </p>
+</div>
+
+<div>
+    <h2>Video de apoyo</h2>
+    <video src="ciencias sociales.mp4" controls>
+        Tu navegador no soporta el video.
+    </video>
+</div>
+
+<div>
+    <h2>Cuestionario de Evaluación</h2>
+
+    <form id="quizForm">
+        <ol>
+
+            <li>
+                ¿Qué poder se encarga de gobernar y administrar un país?<br>
+                <label><input type="radio" name="p1" value="A"> A) Poder Ejecutivo</label><br>
+                <label><input type="radio" name="p1" value="B"> B) Poder Legislativo</label><br>
+                <label><input type="radio" name="p1" value="C"> C) Poder Judicial</label><br>
+                <label><input type="radio" name="p1" value="D"> D) Poder Federal</label>
+            </li>
+
+            <li>
+                ¿Cuál es la función principal del Poder Legislativo?<br>
+                <label><input type="radio" name="p2" value="A"> A) Crear y modificar leyes</label><br>
+                <label><input type="radio" name="p2" value="B"> B) Gobernar el país</label><br>
+                <label><input type="radio" name="p2" value="C"> C) Aplicar justicia</label><br>
+                <label><input type="radio" name="p2" value="D"> D) Dirigir la economía</label>
+            </li>
+
+            <li>
+                ¿Qué es la democracia?<br>
+                <label><input type="radio" name="p3" value="A"> A) Un sistema donde el poder lo tiene el pueblo</label><br>
+                <label><input type="radio" name="p3" value="B"> B) Un sistema militar</label><br>
+                <label><input type="radio" name="p3" value="C"> C) Un gobierno sin leyes</label><br>
+                <label><input type="radio" name="p3" value="D"> D) Un tipo de dictadura</label>
+            </li>
+
+            <li>
+                ¿En qué años ocurrió la Revolución Industrial?<br>
+                <label><input type="radio" name="p4" value="A"> A) 1760 a 1840</label><br>
+                <label><input type="radio" name="p4" value="B"> B) 1500 a 1600</label><br>
+                <label><input type="radio" name="p4" value="C"> C) 1900 a 2000</label><br>
+                <label><input type="radio" name="p4" value="D"> D) 2000 a 2020</label>
+            </li>
+
+            <li>
+                ¿Qué son los derechos humanos?<br>
+                <label><input type="radio" name="p5" value="A"> A) Derechos que tienen todas las personas</label><br>
+                <label><input type="radio" name="p5" value="B"> B) Leyes solo para trabajadores</label><br>
+                <label><input type="radio" name="p5" value="C"> C) Reglas del gobierno</label><br>
+                <label><input type="radio" name="p5" value="D"> D) Privilegios políticos</label>
+            </li>
+
+            <li>
+                ¿Qué es la economía?<br>
+                <label><input type="radio" name="p6" value="A"> A) Ciencia que estudia el uso de recursos</label><br>
+                <label><input type="radio" name="p6" value="B"> B) Un sistema político</label><br>
+                <label><input type="radio" name="p6" value="C"> C) Una ley</label><br>
+                <label><input type="radio" name="p6" value="D"> D) Una empresa</label>
+            </li>
+
+            <li>
+                ¿Cuál es la primera etapa de la economía?<br>
+                <label><input type="radio" name="p7" value="A"> A) Producción</label><br>
+                <label><input type="radio" name="p7" value="B"> B) Consumo</label><br>
+                <label><input type="radio" name="p7" value="C"> C) Comercialización</label><br>
+                <label><input type="radio" name="p7" value="D"> D) Distribución</label>
+            </li>
+
+            <li>
+                ¿Qué tipo de economía tiene México?<br>
+                <label><input type="radio" name="p8" value="A"> A) Economía mixta</label><br>
+                <label><input type="radio" name="p8" value="B"> B) Socialista</label><br>
+                <label><input type="radio" name="p8" value="C"> C) Comunista</label><br>
+                <label><input type="radio" name="p8" value="D"> D) Feudal</label>
+            </li>
+
+            <li>
+                ¿Qué sector económico obtiene recursos naturales?<br>
+                <label><input type="radio" name="p9" value="A"> A) Sector primario</label><br>
+                <label><input type="radio" name="p9" value="B"> B) Sector secundario</label><br>
+                <label><input type="radio" name="p9" value="C"> C) Sector terciario</label><br>
+                <label><input type="radio" name="p9" value="D"> D) Sector cuaternario</label>
+            </li>
+
+            <li>
+                ¿Qué sector se encarga de los servicios?<br>
+                <label><input type="radio" name="p10" value="A"> A) Sector terciario</label><br>
+                <label><input type="radio" name="p10" value="B"> B) Sector primario</label><br>
+                <label><input type="radio" name="p10" value="C"> C) Sector secundario</label><br>
+                <label><input type="radio" name="p10" value="D"> D) Sector industrial</label>
+            </li>
+
+            <li>
+                ¿Qué es el G20?<br>
+                <label><input type="radio" name="p11" value="A"> A) Grupo de las 20 economías más grandes</label><br>
+                <label><input type="radio" name="p11" value="B"> B) Un partido político</label><br>
+                <label><input type="radio" name="p11" value="C"> C) Una empresa</label><br>
+                <label><input type="radio" name="p11" value="D"> D) Una ley mexicana</label>
+            </li>
+
+            <li>
+                ¿Qué es el Foro Económico Mundial (Davos)?<br>
+                <label><input type="radio" name="p12" value="A"> A) Reunión de líderes económicos</label><br>
+                <label><input type="radio" name="p12" value="B"> B) Un banco</label><br>
+                <label><input type="radio" name="p12" value="C"> C) Una organización sindical</label><br>
+                <label><input type="radio" name="p12" value="D"> D) Un partido político</label>
+            </li>
+
+            <li>
+                ¿Qué artículo constitucional protege el derecho al trabajo?<br>
+                <label><input type="radio" name="p13" value="A"> A) Artículo 123</label><br>
+                <label><input type="radio" name="p13" value="B"> B) Artículo 3</label><br>
+                <label><input type="radio" name="p13" value="C"> C) Artículo 40</label><br>
+                <label><input type="radio" name="p13" value="D"> D) Artículo 1</label>
+            </li>
+
+            <li>
+                ¿Qué tipo de gobierno tiene México?<br>
+                <label><input type="radio" name="p14" value="A"> A) República democrática y federal</label><br>
+                <label><input type="radio" name="p14" value="B"> B) Monarquía</label><br>
+                <label><input type="radio" name="p14" value="C"> C) Dictadura</label><br>
+                <label><input type="radio" name="p14" value="D"> D) Imperio</label>
+            </li>
+
+            <li>
+                ¿Qué es una dictadura?<br>
+                <label><input type="radio" name="p15" value="A"> A) Gobierno con poder concentrado</label><br>
+                <label><input type="radio" name="p15" value="B"> B) Gobierno democrático</label><br>
+                <label><input type="radio" name="p15" value="C"> C) Gobierno federal</label><br>
+                <label><input type="radio" name="p15" value="D"> D) Gobierno mixto</label>
+            </li>
+
+            <li>
+                ¿Qué es el federalismo?<br>
+                <label><input type="radio" name="p16" value="A"> A) División del país en estados autónomos</label><br>
+                <label><input type="radio" name="p16" value="B"> B) Un sistema económico</label><br>
+                <label><input type="radio" name="p16" value="C"> C) Un tipo de dictadura</label><br>
+                <label><input type="radio" name="p16" value="D"> D) Una ley laboral</label>
+            </li>
+
+            <li>
+                ¿Qué es el capitalismo?<br>
+                <label><input type="radio" name="p17" value="A"> A) Sistema económico basado en propiedad privada</label><br>
+                <label><input type="radio" name="p17" value="B"> B) Sistema socialista</label><br>
+                <label><input type="radio" name="p17" value="C"> C) Sistema feudal</label><br>
+                <label><input type="radio" name="p17" value="D"> D) Sistema político</label>
+            </li>
+
+            <li>
+                ¿Cómo se clasifica el capitalismo en México?<br>
+                <label><input type="radio" name="p18" value="A"> A) Capitalismo regulado</label><br>
+                <label><input type="radio" name="p18" value="B"> B) Capitalismo libre</label><br>
+                <label><input type="radio" name="p18" value="C"> C) Socialismo</label><br>
+                <label><input type="radio" name="p18" value="D"> D) Comunismo</label>
+            </li>
+
+            <li>
+                ¿Qué artículo establece que el Estado dirige el desarrollo nacional?<br>
+                <label><input type="radio" name="p19" value="A"> A) Artículo 25</label><br>
+                <label><input type="radio" name="p19" value="B"> B) Artículo 123</label><br>
+                <label><input type="radio" name="p19" value="C"> C) Artículo 40</label><br>
+                <label><input type="radio" name="p19" value="D"> D) Artículo 6</label>
+            </li>
+
+            <li>
+                ¿Qué ley protege los derechos laborales en México?<br>
+                <label><input type="radio" name="p20" value="A"> A) Ley Federal del Trabajo</label><br>
+                <label><input type="radio" name="p20" value="B"> B) Ley Electoral</label><br>
+                <label><input type="radio" name="p20" value="C"> C) Código Penal</label><br>
+                <label><input type="radio" name="p20" value="D"> D) Ley de Educación</label>
+            </li>
+
+        </ol>
+
+        <button type="submit">Enviar cuestionario</button>
+    </form>
+
+    <p id="resultado"></p>
+
+<script>
+const correctAnswers = {
+    p1:"A", p2:"A", p3:"A", p4:"A", p5:"A",
+    p6:"A", p7:"A", p8:"A", p9:"A", p10:"A",
+    p11:"A", p12:"A", p13:"A", p14:"A", p15:"A",
+    p16:"A", p17:"A", p18:"A", p19:"A", p20:"A"
+};
+
+document.getElementById("quizForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    let score = 0;
+
+    for(let q in correctAnswers){
+        const ans = document.querySelector(`input[name="${q}"]:checked`);
+        if(ans && ans.value === correctAnswers[q]) score++;
+    }
+
+    document.getElementById("resultado").innerText =
+        "Tu calificación es: " + score + " / 20";
+});
+</script>
+
+
+</div>
+</main>
+</body>
+</html>
